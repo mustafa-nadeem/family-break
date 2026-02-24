@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
 import './App.css'
+import Pillars from './Pillars'
+import Experience from './Experience'
 
 function App() {
   const scrollContainerRef = useRef(null)
@@ -67,6 +69,12 @@ function App() {
           <p className="info-date">September 9-14, 2026</p>
         </div>
       </section>
+
+      {/* Pillars Section */}
+      <Pillars />
+
+      {/* Experience Section */}
+      <Experience />
     </>
   )
 }
