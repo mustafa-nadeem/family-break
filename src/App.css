@@ -1,0 +1,91 @@
+/* ============================
+   Scroll-driven Hero Animation
+   ============================ */
+
+.hero-scroll-container {
+  /* Extra height gives room for the scroll animation */
+  height: 200vh;
+  position: relative;
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* Starting state — no margin, no radius */
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  border-radius: 0;
+  background-color: #000;
+  will-change: margin-left, margin-right, margin-top, border-radius;
+  transition: margin-left 0.05s ease-out, margin-right 0.05s ease-out, margin-top 0.05s ease-out, border-radius 0.05s ease-out;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================
+   Info Details Section
+   ============================ */
+
+.info-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 2.5rem;
+  background-color: #fff;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.info-subtitle {
+  font-size: 0.9rem;
+  color: #000;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.info-right {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.75rem;
+}
+
+.info-date {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+  margin: 0;
+}
