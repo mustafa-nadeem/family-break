@@ -1,0 +1,55 @@
+/* ============================
+   Speakers Section
+   ============================ */
+
+/* 
+ * PLACEHOLDER STYLES - Replace with your actual implementation
+ * No fixed heights - section will grow based on content
+ */
+
+.speakers-section {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 4rem 2.5rem;
+}
+
+.speakers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.speakers-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 2rem;
+}
+
+.speakers-placeholder {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================
+   Responsive Styles
+   ============================ */
+
+@media (max-width: 768px) {
+  .speakers-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .speakers-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .speakers-section {
+    padding: 2rem 1rem;
+  }
+
+  .speakers-title {
+    font-size: 1.75rem;
+  }
+}

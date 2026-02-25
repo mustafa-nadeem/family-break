@@ -1,0 +1,54 @@
+/* ============================
+   Youth Program Section
+   ============================ */
+
+/* 
+ * PLACEHOLDER STYLES - Replace with your actual implementation
+ * No fixed heights - section will grow based on content
+ */
+
+.youth-program-section {
+  background-color: #f0ebe5;
+  padding: 4rem 2.5rem;
+}
+
+.youth-program-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.youth-program-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2rem;
+}
+
+.youth-program-placeholder {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ============================
+   Responsive Styles
+   ============================ */
+
+@media (max-width: 768px) {
+  .youth-program-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .youth-program-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .youth-program-section {
+    padding: 2rem 1rem;
+  }
+
+  .youth-program-title {
+    font-size: 1.75rem;
+  }
+}
