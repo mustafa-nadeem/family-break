@@ -2,54 +2,184 @@
    Speakers Section
    ============================ */
 
-/* 
- * PLACEHOLDER STYLES - Replace with your actual implementation
- * No fixed heights - section will grow based on content
- */
-
 .speakers-section {
   background-color: #1a1a1a;
   color: #fff;
-  padding: 4rem 2.5rem;
+  padding: 6rem 3rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .speakers-container {
-  max-width: 1200px;
+  max-width: 2400px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .speakers-title {
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
-  margin: 0 0 2rem;
+  margin: 0 0 3rem;
+  letter-spacing: -0.02em;
 }
 
-.speakers-placeholder {
-  font-size: 1rem;
+/* Speakers Grid */
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.5rem;
+}
+
+/* Speaker Card */
+.speaker-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 7 / 10;
+  cursor: pointer;
+}
+
+.speaker-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.speaker-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.speaker-card:hover .speaker-image {
+  transform: scale(1.08);
+  filter: brightness(0.5);
+}
+
+/* Speaker Content - Overlay */
+.speaker-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.speaker-card:hover .speaker-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.speaker-title {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
 }
 
-/* ============================
-   Responsive Styles
-   ============================ */
+.speaker-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+.speaker-description {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+@media (max-width: 1400px) {
+  .speakers-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .speakers-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .speakers-section {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+  }
+
+  .speakers-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .speakers-title {
+    font-size: 2.5rem;
+  }
+}
 
 @media (max-width: 768px) {
   .speakers-section {
-    padding: 3rem 1.5rem;
+    padding: 4rem 1rem;
+  }
+
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .speakers-title {
     font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .speaker-name {
+    font-size: 1.1rem;
+  }
+
+  .speaker-description {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .speakers-section {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
+  }
+
+  .speakers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .speakers-title {
     font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .speaker-name {
+    font-size: 1rem;
+  }
+
+  .speaker-description {
+    font-size: 0.75rem;
   }
 }

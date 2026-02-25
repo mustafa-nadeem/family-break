@@ -7,6 +7,7 @@ import {
   DayVisitor,
   Speakers,
   YouthProgram,
+  Testimonials,
   FAQ,
   Footer
 } from './components'
@@ -37,6 +38,9 @@ function App() {
 
       {/* Youth Program Section */}
       <YouthProgram />
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* FAQ Section */}
       <FAQ />
