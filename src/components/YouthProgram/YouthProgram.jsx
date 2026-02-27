@@ -21,23 +21,23 @@ const programSections = [
   {
     id: '4-6',
     label: '4–6 year olds',
-    title: '4–6 Year Olds',
+    title: 'Little Hearts Programme (Ages 4–6)',
     content:
-      'This group enjoys a mix of creative arts, storytelling, outdoor play and introductory Islamic lessons. Activities are designed to spark curiosity and build social skills in a fun, supervised setting with plenty of energy breaks and snack times.',
+      'A joyful and nurturing introduction to Islamic learning, designed especially for our youngest attendees. Little Hearts blends storytelling, creativity, movement and play within a warm, safe, faith-centred environment.\n\nWhat children enjoy:\n• Islamic story adventures that bring morals to life\n• Creative crafts, roleplay and interactive learning\n• Light football sessions and active play\n• Safe soft play exploration\n• Nasheeds and puppet theatre experiences\n\nChildren are placed into colour-coded classes (Yellow, Green, Red) based on age and development.\n\nSessions:\nMorning: 9:00am–12:00pm\nAfternoon: 3:00pm–6:00pm\n\nLittle Hearts — where young imaginations grow and a love for Islam begins.',
   },
   {
     id: '7-11',
     label: '7–11 year olds',
-    title: '7–11 Year Olds',
+    title: 'Young Explorers Programme (Ages 7–11)',
     content:
-      'Children in this age group participate in structured Quran workshops, public speaking exercises, team sports, and exciting competitions. The programme is designed to challenge them intellectually while keeping things engaging and enjoyable.',
+      'A vibrant programme where meaningful Islamic learning meets energetic fun. Designed to build confidence, curiosity and strong friendships in a structured, supportive setting.\n\nProgramme highlights:\n• Age-appropriate Islamic principle lessons\n• Four activity sessions and two educational lessons daily\n• Football, inflatables, gaming tournaments, rounders, arts and more\n• Small group classes supported by dedicated mentors\n\nYoung Explorers encourages teamwork, independence and spiritual growth — helping children thrive socially and personally.\n\nYoung Explorers — where learning is exciting and young Muslims grow with confidence.',
   },
   {
     id: '12-16',
     label: '12–16 year olds',
-    title: '12–16 Year Olds',
+    title: 'Teen Track Programme (Ages 12–16)',
     content:
-      'Teens take part in leadership workshops, debate sessions, advanced Islamic studies, martial arts, and team-building challenges. This track is built to inspire confidence, strengthen identity, and create lasting friendships.',
+      'A transformative experience supporting teens through identity, faith and real-life challenges in a safe, empowering environment.\n\nWhat teens engage in:\n• Identity and resilience workshops\n• Open discussions on real-life issues through an Islamic lens\n• Sports tournaments and obstacle challenges\n• Mentorship from experienced youth leaders\n\nTeen Track builds confidence, strengthens faith and equips young people with direction and purpose.\n\nTeen Track — where young Muslims find their voice and step forward with clarity.',
   },
   {
     id: 'parent',
