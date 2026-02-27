@@ -3,38 +3,43 @@ import './Speakers.css'
 const speakersData = [
   {
     id: 1,
-    name: 'Shaqur Rehman',
-    title: 'Sheikh',
-    description: 'An engaging and motivational speaker with a passion for empowering the next generation. Shaqur focuses on mindset, identity, and navigating modern challenges while staying true to strong values and principles.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop',
+    name: 'Asim Khan',
+    title: 'Imam',
+    description:
+      'An inspiring imam who connects faith to everyday life, guiding communities with warmth, clarity, and purpose.',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=900&auto=format&fit=crop',
   },
   {
     id: 2,
-    name: 'Speaker Name',
-    title: 'Title',
-    description: 'Engaging speaker with expertise in personal development and transformational leadership.',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=500&auto=format&fit=crop',
+    name: 'Shaqur Rehman',
+    title: 'Sheikh',
+    description:
+      'An engaging and motivational speaker with a passion for empowering the next generation.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=900&auto=format&fit=crop',
   },
   {
     id: 3,
-    name: 'Speaker Name',
-    title: 'Title',
-    description: 'Engaging speaker with expertise in personal development and transformational leadership.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=500&auto=format&fit=crop',
+    name: 'Umer Suleman',
+    title: 'Ustadh',
+    description:
+      'A thoughtful educator focused on reflection, character, and building a resilient Muslim identity.',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=900&auto=format&fit=crop',
   },
   {
     id: 4,
-    name: 'Speaker Name',
-    title: 'Title',
-    description: 'Engaging speaker with expertise in personal development and transformational leadership.',
-    image: 'https://images.unsplash.com/photo-1519631128182-b87fed20a7e7?q=80&w=500&auto=format&fit=crop',
+    name: 'Omar Farooq',
+    title: 'Sheikh',
+    description:
+      'A dynamic speaker blending tradition and relevance to inspire meaningful spiritual growth.',
+    image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=900&auto=format&fit=crop',
   },
   {
     id: 5,
-    name: 'Speaker Name',
-    title: 'Title',
-    description: 'Engaging speaker with expertise in personal development and transformational leadership.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop',
+    name: 'Bilal Nazir',
+    title: 'Imam',
+    description:
+      'A community leader dedicated to uplifting families through faith, service, and practical guidance.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=900&auto=format&fit=crop',
   },
 ]
 

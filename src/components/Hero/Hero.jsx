@@ -69,15 +69,18 @@ function Hero() {
         <div className="hero-event-info">
           <div className="info-left">
             <h1 className="info-title">
-              <span className="title-the">The</span>{' '}
-              <span className="title-night">Night</span>{' '}
-              <span className="title-journey">Journey</span>
+              <span className="title-the">Family</span>{' '}
+              <span className="title-night">Break</span>{' '}
+              <span className="title-journey">2026</span>
             </h1>
-            <p className="info-tagline">Reflections on Surah Al Israa</p>
           </div>
           <div className="info-right">
-            <p className="info-date">23rd - 26th August 2024</p>
-            <p className="info-location">Berkshire, United Kingdom</p>
+            <p className="info-date">
+              Saturday, 15th August 2026 - Tuesday 18th August 2026
+            </p>
+            <p className="info-location">
+              De Vere Wokefield Estate, Reading
+            </p>
           </div>
         </div>
       </div>

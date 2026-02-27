@@ -2,13 +2,8 @@
    FAQ Section
    ============================ */
 
-/* 
- * PLACEHOLDER STYLES - Replace with your actual implementation
- * No fixed heights - section will grow based on content
- */
-
 .faq-section {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 4rem 2.5rem;
 }
 
@@ -24,9 +19,67 @@
   margin: 0 0 2rem;
 }
 
-.faq-placeholder {
-  font-size: 1rem;
+.faq-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #e0e0e0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-question:hover {
+  opacity: 0.8;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.faq-question-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
   color: #666;
+  flex-shrink: 0;
+  width: 1.5rem;
+  text-align: center;
+  line-height: 1;
+}
+
+.faq-answer {
+  padding: 0 0 1.25rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
 }
 
 /* ============================
@@ -41,6 +94,10 @@
   .faq-title {
     font-size: 2rem;
   }
+
+  .faq-question-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -50,5 +107,9 @@
 
   .faq-title {
     font-size: 1.75rem;
+  }
+
+  .faq-question-text {
+    font-size: 0.95rem;
   }
 }

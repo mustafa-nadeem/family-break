@@ -9,10 +9,12 @@ function Navbar() {
           <img src={logo} alt="Family Break" />
         </div>
         <nav className="navbar-links" aria-label="Primary">
-          <a href="#topic">Topic</a>
-          <a href="#activities">Activities</a>
-          <a href="#food">Food</a>
-          <a href="#venue">Venue</a>
+          <a href="#overview">Overview</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#day-visitor">Day Visitor</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#youth-programme">Youth Programme</a>
+          <a href="#faq">FAQ</a>
         </nav>
         <div className="navbar-cta">
           <a className="navbar-book" href="#book">

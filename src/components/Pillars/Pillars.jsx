@@ -5,33 +5,33 @@ const pillarsData = [
   {
     id: 'topic',
     label: 'Topic',
-    title: 'Event Focus',
+    title: 'The Greatest: Reflections from Ayatul Kursi',
     description:
-      'Explore the central theme guiding the experience, from keynote ideas to the stories shaping our gatherings. The topic frames the conversations and helps everyone connect around shared purpose.',
+      'Family Break 2026 is a Qur’an-centred, activity-filled retreat for the heart, mind, and soul. Come together to learn, laugh, and reflect in an atmosphere of warmth, connection, and joy. Relax. Reconnect. Revive.',
     image: 'https://placehold.co/700x500/2a2a2a/666?text=Topic',
   },
   {
     id: 'activities',
     label: 'Activities',
-    title: 'Engaging Experiences',
+    title: 'Inspiration & Transformation',
     description:
-      'Discover a diverse range of activities designed to inspire, entertain, and create lasting memories. From interactive sessions to networking opportunities, our carefully curated activities ensure every moment is meaningful and enjoyable.',
+      'Dedicated programmes for toddlers, children, and youth, plus engaging sessions for men and women. Enjoy sisters-only and brothers-only sessions, with practical reminders rooted in the Qur’an and Sunnah.',
     image: 'https://placehold.co/700x500/2a2a2a/666?text=Activities',
   },
   {
     id: 'food',
     label: 'Food',
-    title: 'Culinary Excellence',
+    title: 'Fun, Food & Family Fun',
     description:
-      'Indulge in an exquisite culinary journey featuring fine dining experiences and carefully selected cuisines. Our food offerings celebrate excellence, sustainability, and the art of bringing people together through exceptional dining.',
+      'Days and evenings are filled with energy, laughter, and shared experiences. Enjoy exciting family entertainment, gameshows, and live performances as part of the Family Break atmosphere.',
     image: 'https://placehold.co/700x500/2a2a2a/666?text=Food',
   },
   {
     id: 'venue',
     label: 'Venue',
-    title: 'Elegant Setting',
+    title: 'De Vere Wokefield Estate',
     description:
-      'Experience an elegantly designed venue that provides the perfect backdrop for an unforgettable event. Our sophisticated space combines comfort, ambiance, and functionality to create an immersive environment.',
+      'A beautiful luxury 4-star estate in Reading. Step away from everyday life and immerse your family in 3 nights and 4 unforgettable days where relaxation meets inspiration.',
     image: 'https://placehold.co/700x500/2a2a2a/666?text=Venue',
   },
 ]

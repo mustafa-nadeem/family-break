@@ -113,6 +113,8 @@ function YouthProgram() {
         pin: true,
         pinSpacing: true,
         scrub: 0.8,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
       },
     })
 

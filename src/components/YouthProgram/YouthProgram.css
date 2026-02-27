@@ -3,12 +3,13 @@
    ============================ */
 
 .youth-program-section {
-  min-height: 100vh;
-  background-color: #f0ebe5;
+  height: 100vh;
+  background-color: #E3EDF3;
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 4rem 2.5rem;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Main two-column layout */
@@ -19,6 +20,9 @@
   margin: 0 auto;
   width: 100%;
   align-items: center;
+  height: 100%;
+  padding: 4rem 2.5rem;
+  box-sizing: border-box;
 }
 
 /* ---- Left column: static text ---- */
@@ -139,13 +143,13 @@
 
 @media (max-width: 768px) {
   .youth-program-section {
-    padding: 3rem 1.5rem;
-    min-height: auto;
+    height: auto;
   }
 
   .youth-program-layout {
     flex-direction: column;
     gap: 2rem;
+    padding: 3rem 1.5rem;
   }
 
   .youth-program-text {
@@ -190,7 +194,7 @@
    ============================ */
 
 .yp-info-section {
-  background-color: #f4f1ed;
+  background-color: #E3EDF3;
   padding: 5rem 2.5rem;
 }
 
@@ -211,7 +215,7 @@
   list-style: none;
   margin: 0;
   padding: 0.5rem;
-  background: #fff;
+  background: #ffffff;
   border-radius: 18px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   overflow: hidden;
@@ -272,7 +276,7 @@
 /* ---- Content Panel ---- */
 .yp-info-content {
   flex: 1;
-  background: #fff;
+  background: #ffffff;
   border-radius: 22px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
   padding: 3rem 3.25rem;

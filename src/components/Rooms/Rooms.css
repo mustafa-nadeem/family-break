@@ -3,7 +3,7 @@
    ============================ */
 
 .rooms-section {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 4rem 2.5rem;
   min-height: 100vh;
   display: flex;
@@ -83,7 +83,7 @@
 
 /* Individual Room Card */
 .room-card {
-  background: #fff;
+  background: #ffffff;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
