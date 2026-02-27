@@ -3,91 +3,115 @@
    ============================ */
 
 .youth-program-section {
-  background-color: #f0ebe5;
   min-height: 100vh;
-  padding: 4rem 2.5rem;
+  background-color: #f0ebe5;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  padding: 4rem 2.5rem;
 }
 
-.youth-program-container {
+/* Main two-column layout */
+.youth-program-layout {
+  display: flex;
+  gap: 4rem;
   max-width: 1400px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  width: 100%;
   align-items: center;
-  min-height: calc(100vh - 8rem);
 }
 
-/* Left Content */
-.youth-program-content {
-  padding-right: 2rem;
-}
-
-.youth-program-label {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #e91e8c;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 1rem;
+/* ---- Left column: static text ---- */
+.youth-program-text {
+  flex: 1;
 }
 
 .youth-program-title {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 2.75rem;
+  font-weight: 400;
   color: #0a1a4a;
-  line-height: 1.1;
-  margin: 0 0 1.5rem;
+  line-height: 1.2;
+  margin: 0 0 1rem;
 }
 
-.youth-program-tagline {
-  font-size: 1.5rem;
+.youth-program-title strong {
+  font-weight: 800;
+}
+
+.youth-program-subtitle {
+  font-size: 1.4rem;
+  color: #0a1a4a;
+  margin: 0 0 1.5rem;
   font-weight: 600;
-  color: #e91e8c;
-  margin: 0 0 2rem;
 }
 
 .youth-program-description {
-  font-size: 1.125rem;
+  font-size: 1rem;
+  color: #444;
   line-height: 1.7;
-  color: #4a4a4a;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1rem;
 }
 
-.youth-program-description:last-child {
-  margin-bottom: 0;
+.youth-program-highlight {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0a1a4a;
+  line-height: 1.7;
+  margin: 0 0 1rem;
 }
 
-/* Right Cards Stack */
-.youth-program-cards {
+/* ---- Right column: card stack ---- */
+.youth-program-stack {
+  flex: 0 0 35%;
   position: relative;
   height: 500px;
-  perspective: 1000px;
 }
 
+.youth-program-cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual card */
 .youth-card {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 400px;
-  height: 480px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+  padding: 1.5rem;
+  transform-origin: bottom right;
+  border: 3px solid #e91e8c;
+  will-change: transform;
 }
 
-.youth-card-label {
-  color: #fff;
+.youth-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.youth-card-image-wrapper {
+  flex: 1;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.youth-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.youth-card-title {
   font-size: 1.5rem;
   font-weight: 700;
+  color: #fff;
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.75rem 0;
+  margin: 0;
 }
 
 /* ============================
@@ -95,24 +119,20 @@
    ============================ */
 
 @media (max-width: 1024px) {
-  .youth-program-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  .youth-program-layout {
+    gap: 2.5rem;
   }
 
-  .youth-program-content {
-    padding-right: 0;
-    text-align: center;
+  .youth-program-text {
+    flex: 1;
   }
 
-  .youth-program-cards {
-    height: 450px;
-    margin: 0 auto;
-    max-width: 400px;
+  .youth-program-title {
+    font-size: 2rem;
   }
 
-  .youth-card {
-    max-width: 350px;
+  .youth-program-stack {
+    flex: 0 0 35%;
     height: 420px;
   }
 }
@@ -120,27 +140,26 @@
 @media (max-width: 768px) {
   .youth-program-section {
     padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+
+  .youth-program-layout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .youth-program-text {
+    flex: none;
+    width: 100%;
   }
 
   .youth-program-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
-  .youth-program-tagline {
-    font-size: 1.25rem;
-  }
-
-  .youth-program-description {
-    font-size: 1rem;
-  }
-
-  .youth-program-cards {
-    height: 400px;
-  }
-
-  .youth-card {
-    max-width: 300px;
-    height: 360px;
+  .youth-program-stack {
+    width: 100%;
+    height: 380px;
   }
 }
 
@@ -150,24 +169,232 @@
   }
 
   .youth-program-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
-  .youth-program-tagline {
-    font-size: 1.125rem;
-  }
-
-  .youth-program-cards {
-    height: 350px;
-  }
-
-  .youth-card {
-    max-width: 260px;
+  .youth-program-stack {
     height: 320px;
   }
 
-  .youth-card-label {
-    font-size: 1rem;
-    padding: 2rem 1rem 1rem;
+  .youth-card {
+    padding: 1rem;
+  }
+
+  .youth-card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* ============================
+   Youth Program – Info Panel
+   ============================ */
+
+.yp-info-section {
+  background-color: #f4f1ed;
+  padding: 5rem 2.5rem;
+}
+
+.yp-info-container {
+  display: flex;
+  gap: 2.5rem;
+  max-width: 1160px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* ---- Side Navigation ---- */
+.yp-info-nav {
+  flex: 0 0 252px;
+}
+
+.yp-info-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.yp-info-nav-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 12px;
+  position: relative;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.yp-info-nav-item:hover {
+  background-color: #f0ebe5;
+  transform: translateY(-1px);
+}
+
+.yp-info-nav-item:focus-visible {
+  outline: 2px solid #0a1a4a;
+  outline-offset: -2px;
+}
+
+.yp-info-nav-item--active {
+  background-color: #0a1a4a;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(10, 26, 74, 0.25);
+}
+
+.yp-info-nav-item--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  background: #e91e8c;
+  border-radius: 0 4px 4px 0;
+}
+
+.yp-info-nav-item--active:hover {
+  background-color: #0a1a4a;
+  transform: none;
+}
+
+/* ---- Content Panel ---- */
+.yp-info-content {
+  flex: 1;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  padding: 3rem 3.25rem;
+  min-height: 320px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.yp-info-content--fading {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.yp-info-content-title {
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #0a1a4a;
+  margin: 0 0 1rem;
+}
+
+.yp-info-divider {
+  height: 1px;
+  background: #e8e4df;
+  margin-bottom: 1.5rem;
+}
+
+.yp-info-content-text {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.75;
+  max-width: 70ch;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* ============================
+   Responsive – Info Panel
+   ============================ */
+
+@media (max-width: 1024px) {
+  .yp-info-section {
+    padding: 3.5rem 2rem;
+  }
+
+  .yp-info-nav {
+    flex: 0 0 220px;
+  }
+
+  .yp-info-content {
+    padding: 2.25rem 2.5rem;
+  }
+
+  .yp-info-content-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .yp-info-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .yp-info-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .yp-info-nav {
+    flex: none;
+    width: 100%;
+  }
+
+  .yp-info-nav-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .yp-info-nav-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .yp-info-nav-item {
+    white-space: nowrap;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 10px;
+  }
+
+  .yp-info-nav-item--active::before {
+    display: none;
+  }
+
+  .yp-info-content {
+    padding: 2rem 1.75rem;
+    min-height: auto;
+    border-radius: 18px;
+  }
+
+  .yp-info-content-title {
+    font-size: 1.4rem;
+  }
+
+  .yp-info-content-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .yp-info-section {
+    padding: 2rem 1rem;
+  }
+
+  .yp-info-content {
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+  }
+
+  .yp-info-content-title {
+    font-size: 1.25rem;
   }
 }

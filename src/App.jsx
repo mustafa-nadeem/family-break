@@ -10,6 +10,7 @@ import {
   YouthProgram,
   Testimonials,
   FAQ,
+  Sponsors,
   Footer
 } from './components'
 
@@ -45,6 +46,9 @@ function App() {
 
       {/* FAQ Section */}
       <FAQ />
+
+      {/* Sponsors Section */}
+      <Sponsors />
 
       {/* Footer */}
       <Footer />
