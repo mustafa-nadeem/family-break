@@ -6,6 +6,7 @@
   /* Extra height gives room for the scroll animation */
   height: 200vh;
   position: relative;
+  --navbar-offset: 72px;
 }
 
 .hero-sticky {
@@ -15,28 +16,121 @@
   width: 100%;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
+  flex-direction: column;
+  background-color: #00247D;
 }
 
 .video-wrapper {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
-  /* Starting state — no margin, no radius */
+  /* Starting state — no margin, no radius, full viewport height */
   margin-left: 0;
-  margin-right: 0;
   margin-top: 0;
   border-radius: 0;
-  background-color: #000;
-  will-change: margin-left, margin-right, margin-top, border-radius;
-  transition: margin-left 0.05s ease-out, margin-right 0.05s ease-out, margin-top 0.05s ease-out, border-radius 0.05s ease-out;
+  background-color: transparent;
+  position: relative;
+  flex-shrink: 0;
+  will-change: margin-left, margin-top, width, border-radius, height;
+  transition: margin-left 0.05s ease-out, margin-top 0.05s ease-out, width 0.05s ease-out, border-radius 0.05s ease-out, height 0.05s ease-out;
 }
 
-.hero-video {
+.hero-media {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.hero-title-image {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: min(56vw, 504px);
+  max-height: 35vh;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Event Info inside Hero */
+.hero-event-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 2.5rem;
+  background-color: #00247D;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.hero-event-info .info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hero-event-info .info-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero-event-info .info-title .title-the {
+  color: #ffffff;
+}
+
+.hero-event-info .info-title .title-night {
+  color: #ffffff;
+}
+
+.hero-event-info .info-title .title-journey {
+  color: #ffffff;
+}
+
+.hero-event-info .info-tagline {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-event-info .info-subtitle {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hero-event-info .info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+}
+
+.hero-event-info .info-date {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hero-event-info .info-location {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
 }

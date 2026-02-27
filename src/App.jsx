@@ -1,12 +1,14 @@
 import {
   Hero,
-  EventInfo,
+  Navbar,
+  RetreatHighlight,
   Pillars,
   Experience,
   Rooms,
   DayVisitor,
   Speakers,
   YouthProgram,
+  Testimonials,
   FAQ,
   Footer
 } from './components'
@@ -14,11 +16,11 @@ import {
 function App() {
   return (
     <>
-      {/* Hero Section */}
+      <Navbar />
+      {/* Hero Section (includes Event Info) */}
       <Hero />
 
-      {/* Event Info Section */}
-      <EventInfo />
+      <RetreatHighlight />
 
       {/* Pillars Section */}
       <Pillars />
@@ -37,6 +39,9 @@ function App() {
 
       {/* Youth Program Section */}
       <YouthProgram />
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* FAQ Section */}
       <FAQ />

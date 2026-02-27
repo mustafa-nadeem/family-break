@@ -2,36 +2,120 @@
    Youth Program Section
    ============================ */
 
-/* 
- * PLACEHOLDER STYLES - Replace with your actual implementation
- * No fixed heights - section will grow based on content
- */
-
 .youth-program-section {
   background-color: #f0ebe5;
+  min-height: 100vh;
   padding: 4rem 2.5rem;
+  overflow: hidden;
 }
 
 .youth-program-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: calc(100vh - 8rem);
+}
+
+/* Left Content */
+.youth-program-content {
+  padding-right: 2rem;
+}
+
+.youth-program-label {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e91e8c;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
 }
 
 .youth-program-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #0a1a4a;
+  line-height: 1.1;
+  margin: 0 0 1.5rem;
+}
+
+.youth-program-tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e91e8c;
   margin: 0 0 2rem;
 }
 
-.youth-program-placeholder {
-  font-size: 1rem;
-  color: #666;
+.youth-program-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0 0 1.5rem;
+}
+
+.youth-program-description:last-child {
+  margin-bottom: 0;
+}
+
+/* Right Cards Stack */
+.youth-program-cards {
+  position: relative;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.youth-card {
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youth-card-label {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.5rem;
 }
 
 /* ============================
    Responsive Styles
    ============================ */
+
+@media (max-width: 1024px) {
+  .youth-program-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .youth-program-content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .youth-program-cards {
+    height: 450px;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .youth-card {
+    max-width: 350px;
+    height: 420px;
+  }
+}
 
 @media (max-width: 768px) {
   .youth-program-section {
@@ -39,7 +123,24 @@
   }
 
   .youth-program-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .youth-program-tagline {
+    font-size: 1.25rem;
+  }
+
+  .youth-program-description {
+    font-size: 1rem;
+  }
+
+  .youth-program-cards {
+    height: 400px;
+  }
+
+  .youth-card {
+    max-width: 300px;
+    height: 360px;
   }
 }
 
@@ -49,6 +150,24 @@
   }
 
   .youth-program-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
+  }
+
+  .youth-program-tagline {
+    font-size: 1.125rem;
+  }
+
+  .youth-program-cards {
+    height: 350px;
+  }
+
+  .youth-card {
+    max-width: 260px;
+    height: 320px;
+  }
+
+  .youth-card-label {
+    font-size: 1rem;
+    padding: 2rem 1rem 1rem;
   }
 }

@@ -1,19 +1,60 @@
 import './DayVisitor.css'
 
-/**
- * Day Visitor Section
- * 
- * PLACEHOLDER - Replace with your actual implementation
- * This component has no height restrictions - it will grow based on content
- */
 function DayVisitor() {
   return (
     <section className="day-visitor-section">
-      <div className="day-visitor-container">
-        {/* PLACEHOLDER CONTENT - Replace everything below */}
-        <h2 className="day-visitor-title">Day Visitor</h2>
-        <p className="day-visitor-placeholder">Day visitor information and packages coming soon...</p>
-        {/* END PLACEHOLDER */}
+      <div className="day-visitor-content">
+        <div className="day-visitor-text">
+          <h2 className="day-visitor-title">Day Visitor Tickets</h2>
+
+          <p className="day-visitor-intro">
+            Do you live nearby or simply prefer to attend the event without staying overnight? Our Day Visitor
+            Tickets allow you to experience the event as a day visitor while enjoying full access to the event
+            programme and meals throughout the entire retreat (except accommodation and breakfast).
+          </p>
+
+          <h3 className="day-visitor-subtitle">What's Included with Day Visitor Tickets?</h3>
+
+          <div className="day-visitor-features">
+            <div className="feature">
+              <h4 className="feature-title">Full Access</h4>
+              <p className="feature-description">
+                Day visitors enjoy complete access to all event programmes and activities scheduled throughout
+                the retreat, ensuring you don't miss out on any of the enriching experiences.
+              </p>
+            </div>
+
+            <div className="feature">
+              <h4 className="feature-title">Meals Included</h4>
+              <p className="feature-description">
+                Your Day Visitor Ticket covers all meals except breakfast, allowing you to savour delicious,
+                full-board meals with the community.
+              </p>
+            </div>
+
+            <div className="feature">
+              <h4 className="feature-title">Youth Programme Enrollment</h4>
+              <p className="feature-description">
+                Families with children can enrol their youngsters into the engaging Youth Programme, providing
+                kids with a day filled with fun and educational activities.
+              </p>
+            </div>
+          </div>
+
+          <p className="day-visitor-note">
+            Please note that all day visitors are required to register and pick up their event packs upon
+            arrival on Friday or between 7-8 am on Saturday morning.
+          </p>
+
+          <button className="day-visitor-cta">Book Now</button>
+        </div>
+
+        <div className="day-visitor-image">
+          <img
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000&auto=format&fit=crop"
+            alt="Event activities and crowd"
+          />
+        </div>
       </div>
     </section>
   )

@@ -36,7 +36,6 @@ function Rooms() {
       <div className="rooms-container">
         {/* Header */}
         <div className="rooms-header">
-          <span className="rooms-label">Rooms</span>
           <h2 className="rooms-title">
             Welcome to <span className="rooms-title-accent">Your Home</span> Away from Home
           </h2>

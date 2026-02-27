@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Circular Std';
+  src: url('./assets/circular-std-medium-500.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,6 +34,10 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Circular Std', system-ui, sans-serif;
 }
 
 h1 {

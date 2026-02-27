@@ -2,53 +2,226 @@
    Day Visitor Section
    ============================ */
 
-/* 
- * PLACEHOLDER STYLES - Replace with your actual implementation
- * No fixed heights - section will grow based on content
- */
-
 .day-visitor-section {
-  background-color: #fff;
-  padding: 4rem 2.5rem;
+  min-height: 100vh;
+  background: #fff;
 }
 
-.day-visitor-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.day-visitor-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.day-visitor-text {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .day-visitor-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  color: #1a1a1a;
-  margin: 0 0 2rem;
+  color: #00247D;
+  margin: 0 0 24px 0;
+  line-height: 1.1;
 }
 
-.day-visitor-placeholder {
+.day-visitor-intro {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+  margin: 0 0 32px 0;
+  max-width: 540px;
+}
+
+.day-visitor-subtitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #00247D;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.day-visitor-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00247D;
+  margin: 0 0 8px 0;
+}
+
+.feature-description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+  max-width: 540px;
+}
+
+.day-visitor-note {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 0 32px 0;
+  max-width: 540px;
+}
+
+.day-visitor-cta {
+  background-color: #E0196F;
+  color: #fff;
+  border: none;
+  padding: 16px 48px;
   font-size: 1rem;
-  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.day-visitor-cta:hover {
+  background-color: #c01560;
+}
+
+.day-visitor-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.day-visitor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* ============================
    Responsive Styles
    ============================ */
 
+@media (max-width: 1200px) {
+  .day-visitor-text {
+    padding: 60px 48px;
+  }
+
+  .day-visitor-title {
+    font-size: 3rem;
+  }
+
+  .day-visitor-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .day-visitor-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh auto;
+  }
+
+  .day-visitor-text {
+    padding: 48px 40px;
+    order: 2;
+  }
+
+  .day-visitor-image {
+    order: 1;
+  }
+
+  .day-visitor-title {
+    font-size: 2.5rem;
+  }
+
+  .day-visitor-subtitle {
+    font-size: 1.35rem;
+  }
+
+  .day-visitor-intro,
+  .feature-description,
+  .day-visitor-note {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
-  .day-visitor-section {
-    padding: 3rem 1.5rem;
+  .day-visitor-content {
+    grid-template-rows: 45vh auto;
+  }
+
+  .day-visitor-text {
+    padding: 40px 32px;
   }
 
   .day-visitor-title {
     font-size: 2rem;
   }
+
+  .day-visitor-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .day-visitor-intro {
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+  }
+
+  .day-visitor-features {
+    gap: 20px;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+  }
+
+  .feature-description {
+    font-size: 0.85rem;
+  }
+
+  .day-visitor-note {
+    font-size: 0.85rem;
+  }
+
+  .day-visitor-cta {
+    padding: 14px 40px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .day-visitor-section {
-    padding: 2rem 1rem;
+  .day-visitor-content {
+    grid-template-rows: 40vh auto;
+  }
+
+  .day-visitor-text {
+    padding: 32px 20px;
   }
 
   .day-visitor-title {
     font-size: 1.75rem;
+  }
+
+  .day-visitor-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .day-visitor-features {
+    gap: 18px;
+  }
+
+  .day-visitor-cta {
+    padding: 12px 32px;
+    font-size: 0.85rem;
   }
 }

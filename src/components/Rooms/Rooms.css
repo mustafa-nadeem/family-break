@@ -4,7 +4,11 @@
 
 .rooms-section {
   background-color: #fff;
-  padding: 6rem 2.5rem;
+  padding: 4rem 2.5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .rooms-container {
@@ -16,15 +20,6 @@
 .rooms-header {
   text-align: center;
   margin-bottom: 3rem;
-}
-
-.rooms-label {
-  display: block;
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
-  margin-bottom: 2rem;
 }
 
 .rooms-title {
@@ -44,7 +39,7 @@
 .rooms-tagline {
   font-size: 1.25rem;
   font-style: italic;
-  color: #a08060;
+  color: #E0196F;
   margin: 0;
   font-weight: 400;
 }

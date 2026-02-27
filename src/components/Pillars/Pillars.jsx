@@ -3,44 +3,36 @@ import './Pillars.css'
 
 const pillarsData = [
   {
-    id: 'sleep',
-    label: 'Sleep',
-    title: 'The Restorative State',
+    id: 'topic',
+    label: 'Topic',
+    title: 'Event Focus',
     description:
-      'Sleep is a foundational pillar of well-being, not simply as rest, but as a powerful tool for cellular repair, hormonal balance, and cognitive clarity. Through intentional evening rituals—such as warm elixirs, guided breathwork, and natural supplements—sleep is optimized as a therapeutic state. In this sacred stillness, the body repairs, the mind resets, and the path to longevity quietly unfolds.',
-    image: 'https://placehold.co/700x500/2a2a2a/666?text=Sleep',
+      'Explore the central theme guiding the experience, from keynote ideas to the stories shaping our gatherings. The topic frames the conversations and helps everyone connect around shared purpose.',
+    image: 'https://placehold.co/700x500/2a2a2a/666?text=Topic',
   },
   {
-    id: 'nutrition',
-    label: 'Nutrition',
-    title: 'Fuel for Vitality',
+    id: 'activities',
+    label: 'Activities',
+    title: 'Engaging Experiences',
     description:
-      'Nutrition is the cornerstone of lasting energy and resilience. By embracing whole, nutrient-dense foods and mindful eating practices, we nourish the body at a cellular level. Every meal becomes an opportunity to restore balance, support gut health, and cultivate a deeper connection between what we consume and how we feel.',
-    image: 'https://placehold.co/700x500/2a2a2a/666?text=Nutrition',
+      'Discover a diverse range of activities designed to inspire, entertain, and create lasting memories. From interactive sessions to networking opportunities, our carefully curated activities ensure every moment is meaningful and enjoyable.',
+    image: 'https://placehold.co/700x500/2a2a2a/666?text=Activities',
   },
   {
-    id: 'movement',
-    label: 'Movement',
-    title: 'The Body in Motion',
+    id: 'food',
+    label: 'Food',
+    title: 'Culinary Excellence',
     description:
-      'Movement is medicine—a practice that goes beyond fitness to unlock physical freedom and mental clarity. Whether through structured exercise, yoga, or intuitive movement, the body thrives when it flows. Regular, purposeful motion strengthens the heart, sharpens the mind, and builds a foundation of resilience that carries through every aspect of life.',
-    image: 'https://placehold.co/700x500/2a2a2a/666?text=Movement',
+      'Indulge in an exquisite culinary journey featuring fine dining experiences and carefully selected cuisines. Our food offerings celebrate excellence, sustainability, and the art of bringing people together through exceptional dining.',
+    image: 'https://placehold.co/700x500/2a2a2a/666?text=Food',
   },
   {
-    id: 'self-care',
-    label: 'Self-Care',
-    title: 'Ritual & Renewal',
+    id: 'venue',
+    label: 'Venue',
+    title: 'Elegant Setting',
     description:
-      'Self-care is the deliberate act of returning to yourself. It encompasses the rituals that restore the skin, soothe the nervous system, and honor the body as a whole. From therapeutic treatments to moments of quiet solitude, self-care is not indulgence—it is essential maintenance for a life lived fully and intentionally.',
-    image: 'https://placehold.co/700x500/2a2a2a/666?text=Self-Care',
-  },
-  {
-    id: 'mental-strength',
-    label: 'Mental Strength',
-    title: 'The Inner Fortress',
-    description:
-      'Mental strength is cultivated through practice—meditation, journaling, breathwork, and stillness. It is the ability to meet life with equanimity, to respond rather than react. By training the mind with the same dedication we give the body, we build an inner resilience that anchors us through uncertainty and empowers clarity of thought.',
-    image: 'https://placehold.co/700x500/2a2a2a/666?text=Mental+Strength',
+      'Experience an elegantly designed venue that provides the perfect backdrop for an unforgettable event. Our sophisticated space combines comfort, ambiance, and functionality to create an immersive environment.',
+    image: 'https://placehold.co/700x500/2a2a2a/666?text=Venue',
   },
 ]
 
@@ -61,7 +53,6 @@ function Pillars() {
             {pillar.label}
           </button>
         ))}
-        <div className="pillars-tabs-line" />
       </div>
 
       {/* Content */}

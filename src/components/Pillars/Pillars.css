@@ -3,7 +3,7 @@
    ============================ */
 
 .pillars-section {
-  background-color: #000;
+  background-color: #00247D;
   color: #fff;
   padding: 4rem 2.5rem 5rem;
   min-height: 100vh;
@@ -20,22 +20,6 @@
   position: relative;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-}
-
-.pillars-tabs-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    #8b7355 0%,
-    #c4a97d 25%,
-    #a08b6a 50%,
-    #8b7355 75%,
-    #6b5a42 100%
-  );
 }
 
 .pillars-tab {
@@ -67,7 +51,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: #fff;
+  background: #E0196F;
   z-index: 1;
 }
 
@@ -104,6 +88,10 @@
   margin: 0 0 1.25rem;
   color: #fff;
   letter-spacing: -0.01em;
+  text-decoration: underline;
+  text-decoration-color: #E0196F;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
 }
 
 .pillars-description {
