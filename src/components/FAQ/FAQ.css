@@ -4,7 +4,7 @@
 
 .faq-section {
   background: linear-gradient(160deg, #0a1a4a 0%, #0d2463 40%, #142d7a 100%);
-  padding: 6rem 3rem;
+  padding: 6rem 2.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -38,8 +38,9 @@
 .faq-container {
   display: flex;
   gap: 5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
+  width: 100%;
   position: relative;
   z-index: 1;
   align-items: flex-start;

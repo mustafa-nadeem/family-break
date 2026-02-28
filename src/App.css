@@ -17,3 +17,6 @@
  * - components/Footer/Footer.css
  */
 
+.hero-retreat-gradient {
+  background: linear-gradient(160deg, #0a1a4a 0%, #0d2463 40%, #142d7a 100%);
+}

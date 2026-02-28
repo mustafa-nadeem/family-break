@@ -1,11 +1,42 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import heroImage from '../../assets/hero-image.png'
 import heroText from '../../assets/hero-text.svg'
 import './Hero.css'
 
+const getCountdown = (targetDate) => {
+  const now = new Date()
+  const diffMs = targetDate - now
+
+  if (diffMs <= 0) {
+    return {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+      isLive: true,
+    }
+  }
+
+  const totalSeconds = Math.floor(diffMs / 1000)
+  const days = Math.floor(totalSeconds / 86400)
+  const hours = Math.floor((totalSeconds % 86400) / 3600)
+  const minutes = Math.floor((totalSeconds % 3600) / 60)
+  const seconds = totalSeconds % 60
+
+  return {
+    days,
+    hours,
+    minutes,
+    seconds,
+    isLive: false,
+  }
+}
+
 function Hero() {
   const scrollContainerRef = useRef(null)
   const videoWrapperRef = useRef(null)
+  const countdownTarget = useRef(new Date(2026, 7, 15, 0, 0, 0))
+  const [countdown, setCountdown] = useState(() => getCountdown(countdownTarget.current))
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,6 +79,16 @@ function Hero() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    const tick = () => setCountdown(getCountdown(countdownTarget.current))
+    const intervalId = window.setInterval(tick, 1000)
+    tick()
+
+    return () => window.clearInterval(intervalId)
+  }, [])
+
+  const formatUnit = (value) => String(value).padStart(2, '0')
+
   return (
     <section className="hero-scroll-container" ref={scrollContainerRef}>
       <div className="hero-sticky">
@@ -60,11 +101,18 @@ function Hero() {
             decoding="async"
           />
           <div className="hero-video-overlay" aria-hidden="true" />
-          <img
-            className="hero-title-image"
-            src={heroText}
-            alt="The Greatest. Reflections from Ayatul Kursi"
-          />
+          <div className="hero-title-stack">
+            <img
+              className="hero-title-image"
+              src={heroText}
+              alt="The Greatest. Reflections from Ayatul Kursi"
+            />
+            <div className="hero-title-details">
+              <p className="hero-title-date">
+                Saturday, 15th August 2026 - Tuesday 18th August 2026
+              </p>
+            </div>
+          </div>
         </div>
         <div className="hero-event-info">
           <div className="info-left">
@@ -73,14 +121,33 @@ function Hero() {
               <span className="title-night">Break</span>{' '}
               <span className="title-journey">2026</span>
             </h1>
+            <p className="info-location">De Vere Wokefield Estate, Reading</p>
           </div>
           <div className="info-right">
-            <p className="info-date">
-              Saturday, 15th August 2026 - Tuesday 18th August 2026
-            </p>
-            <p className="info-location">
-              De Vere Wokefield Estate, Reading
-            </p>
+            <div className="countdown">
+              {countdown.isLive ? (
+                <p className="countdown-live">We're live</p>
+              ) : (
+                <div className="countdown-timer" role="timer" aria-live="polite">
+                  <div className="countdown-segment">
+                    <span className="countdown-value">{countdown.days}</span>
+                    <span className="countdown-unit">Days</span>
+                  </div>
+                  <div className="countdown-segment">
+                    <span className="countdown-value">{formatUnit(countdown.hours)}</span>
+                    <span className="countdown-unit">Hours</span>
+                  </div>
+                  <div className="countdown-segment">
+                    <span className="countdown-value">{formatUnit(countdown.minutes)}</span>
+                    <span className="countdown-unit">Minutes</span>
+                  </div>
+                  <div className="countdown-segment">
+                    <span className="countdown-value">{formatUnit(countdown.seconds)}</span>
+                    <span className="countdown-unit">Seconds</span>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

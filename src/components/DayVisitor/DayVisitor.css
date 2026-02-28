@@ -4,7 +4,8 @@
 
 .day-visitor-section {
   min-height: 100vh;
-  background: #E3EDF3;
+  background: linear-gradient(160deg, #0a1a4a 0%, #0d2463 40%, #142d7a 100%);
+  color: #ffffff;
 }
 
 .day-visitor-content {
@@ -24,7 +25,7 @@
 .day-visitor-title {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #00247D;
+  color: #ffffff;
   margin: 0 0 24px 0;
   line-height: 1.1;
 }
@@ -32,7 +33,7 @@
 .day-visitor-intro {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.82);
   margin: 0 0 32px 0;
   max-width: 540px;
 }
@@ -40,7 +41,7 @@
 .day-visitor-subtitle {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #00247D;
+  color: #E0196F;
   margin: 0 0 24px 0;
   line-height: 1.2;
 }
@@ -55,14 +56,14 @@
 .feature-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #00247D;
+  color: #ffffff;
   margin: 0 0 8px 0;
 }
 
 .feature-description {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: #555;
+  color: rgba(255, 255, 255, 0.74);
   margin: 0;
   max-width: 540px;
 }
@@ -70,7 +71,7 @@
 .day-visitor-note {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: #555;
+  color: rgba(255, 255, 255, 0.74);
   margin: 0 0 32px 0;
   max-width: 540px;
 }
@@ -97,6 +98,14 @@
 .day-visitor-image {
   position: relative;
   overflow: hidden;
+}
+
+.day-visitor-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 26, 74, 0.12) 0%, rgba(10, 26, 74, 0.38) 100%);
+  pointer-events: none;
 }
 
 .day-visitor-image img {

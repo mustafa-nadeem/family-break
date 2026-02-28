@@ -13,15 +13,17 @@ import {
   Sponsors,
   Footer
 } from './components'
+import './App.css'
 
 function App() {
   return (
     <>
       <Navbar />
-      {/* Hero Section (includes Event Info) */}
-      <Hero />
-
-      <RetreatHighlight />
+      <div className="hero-retreat-gradient">
+        {/* Hero Section (includes Event Info) */}
+        <Hero />
+        <RetreatHighlight />
+      </div>
 
       {/* Pillars Section */}
       <Pillars />

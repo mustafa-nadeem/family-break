@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import fungameImg from '../../kidspic/fungame.webp'
@@ -90,48 +90,51 @@ function YouthProgram() {
   const [isTransitioning, setIsTransitioning] = useState(false)
   const contentRef = useRef(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const section = sectionRef.current
-    const cards = cardsRef.current.filter(Boolean)
-    const totalCards = cards.length
+    if (!section) return undefined
 
-    // Set initial state for all cards
-    cards.forEach((card, index) => {
-      gsap.set(card, {
-        rotation: 15,
-        y: '100vh',
-        zIndex: index + 1,
+    const ctx = gsap.context(() => {
+      const cards = cardsRef.current.filter(Boolean)
+      const totalCards = cards.length
+      if (!totalCards) return
+
+      cards.forEach((card, index) => {
+        gsap.set(card, {
+          rotation: 15,
+          y: window.innerHeight,
+          zIndex: index + 1,
+        })
       })
-    })
 
-    // Build a single timeline with all card animations
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: 'top top',
-        end: `+=${totalCards * 400}`,
-        pin: true,
-        pinSpacing: true,
-        scrub: 0.8,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
-    })
-
-    // Each card gets an equal slice of the timeline
-    cards.forEach((card) => {
-      tl.to(card, {
-        rotation: 0,
-        y: 0,
-        duration: 1,
-        ease: 'none',
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: () => `+=${totalCards * Math.max(window.innerHeight * 0.45, 320)}`,
+          pin: true,
+          pinSpacing: true,
+          scrub: 0.8,
+          anticipatePin: 3,
+          fastScrollEnd: true,
+          invalidateOnRefresh: true,
+          refreshPriority: 1,
+        },
       })
-    })
 
-    return () => {
-      if (tl.scrollTrigger) tl.scrollTrigger.kill()
-      tl.kill()
-    }
+      cards.forEach((card) => {
+        tl.to(card, {
+          rotation: 0,
+          y: 0,
+          duration: 1,
+          ease: 'none',
+        })
+      })
+    }, section)
+
+    ScrollTrigger.refresh()
+
+    return () => ctx.revert()
   }, [])
 
   /* ── Info panel navigation handler ── */
@@ -170,119 +173,119 @@ function YouthProgram() {
   const activeData = programSections.find((s) => s.id === activeSection)
 
   return (
-    <>
-    {/* ===== GSAP Card Stack Section ===== */}
-    <section className="youth-program-section" ref={sectionRef}>
-      <div className="youth-program-layout">
-        {/* Left — static text */}
-        <div className="youth-program-text">
-          <h2 className="youth-program-title">
-            Discover a <strong>Youth Programme</strong> Like No Other
-          </h2>
-          <p className="youth-program-subtitle">
-            <em>Engaging, Empowering &amp; Educational</em>
-          </p>
-          <p className="youth-program-description">
-            The youth programme is designed to be engaging, fun and inclusive for
-            children, tailored to suit the interests and energy levels of each
-            age group. With safety as our utmost priority, we provide constant
-            supervision in a warm Islamic atmosphere.
-          </p>
-          <p className="youth-program-highlight">
-            Our goal is to empower them to build a connection with Jannah while
-            having a great time. We believe in nurturing their faith and
-            providing a strong Islamic foundation.
-          </p>
-          <p className="youth-program-description">
-            During this retreat, children can look forward to interactive
-            educational sessions, public speaking workshops, Quran workshops,
-            story time sessions and Islamic discussions led by knowledgeable
-            youth specialists. These activities aim to deepen their understanding
-            of Islam, strengthen their connection with Allah and equip them with
-            essential life skills.
-          </p>
-          <p className="youth-program-description">
-            In between educational sessions, we have a range of exciting
-            activities lined up, from arcade games to boxing/martial arts and
-            swimming, ensuring a well-rounded and enjoyable experience for your
-            little ones.
-          </p>
-        </div>
+    <div className="youth-program-shell">
+      {/* ===== GSAP Card Stack Section ===== */}
+      <section className="youth-program-section" ref={sectionRef}>
+        <div className="youth-program-layout">
+          {/* Left — static text */}
+          <div className="youth-program-text">
+            <h2 className="youth-program-title">
+              Discover a <strong>Youth Programme</strong> Like No Other
+            </h2>
+            <p className="youth-program-subtitle">
+              <em>Engaging, Empowering &amp; Educational</em>
+            </p>
+            <p className="youth-program-description">
+              The youth programme is designed to be engaging, fun and inclusive for
+              children, tailored to suit the interests and energy levels of each
+              age group. With safety as our utmost priority, we provide constant
+              supervision in a warm Islamic atmosphere.
+            </p>
+            <p className="youth-program-highlight">
+              Our goal is to empower them to build a connection with Jannah while
+              having a great time. We believe in nurturing their faith and
+              providing a strong Islamic foundation.
+            </p>
+            <p className="youth-program-description">
+              During this retreat, children can look forward to interactive
+              educational sessions, public speaking workshops, Quran workshops,
+              story time sessions and Islamic discussions led by knowledgeable
+              youth specialists. These activities aim to deepen their understanding
+              of Islam, strengthen their connection with Allah and equip them with
+              essential life skills.
+            </p>
+            <p className="youth-program-description">
+              In between educational sessions, we have a range of exciting
+              activities lined up, from arcade games to boxing/martial arts and
+              swimming, ensuring a well-rounded and enjoyable experience for your
+              little ones.
+            </p>
+          </div>
 
-        {/* Right — card stack */}
-        <div className="youth-program-stack">
-          <div className="youth-program-cards">
-            {cardsData.map((card, index) => (
-              <div
-                key={card.id}
-                className="youth-card"
-                ref={(el) => (cardsRef.current[index] = el)}
-                style={{ backgroundColor: card.color }}
-              >
-                <div className="youth-card-inner">
-                  <div className="youth-card-image-wrapper">
-                    <img
-                      src={card.image}
-                      alt={card.title}
-                      className="youth-card-image"
-                    />
+          {/* Right — card stack */}
+          <div className="youth-program-stack">
+            <div className="youth-program-cards">
+              {cardsData.map((card, index) => (
+                <div
+                  key={card.id}
+                  className="youth-card"
+                  ref={(el) => (cardsRef.current[index] = el)}
+                  style={{ backgroundColor: card.color }}
+                >
+                  <div className="youth-card-inner">
+                    <div className="youth-card-image-wrapper">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="youth-card-image"
+                      />
+                    </div>
+                    <h3 className="youth-card-title">{card.title}</h3>
                   </div>
-                  <h3 className="youth-card-title">{card.title}</h3>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* ===== Youth Program Info Panel Section ===== */}
-    <section className="yp-info-section">
-      <div className="yp-info-container">
-        <nav
-          className="yp-info-nav"
-          role="tablist"
-          aria-label="Youth program age groups"
-          aria-orientation="vertical"
-        >
-          <ul className="yp-info-nav-list">
-            {programSections.map((item, index) => (
-              <li key={item.id}>
-                <button
-                  className={`yp-info-nav-item${
-                    activeSection === item.id ? ' yp-info-nav-item--active' : ''
-                  }`}
-                  onClick={() => handleNavClick(item.id)}
-                  onKeyDown={(e) => handleKeyDown(e, item.id, index)}
-                  aria-selected={activeSection === item.id}
-                  role="tab"
-                  tabIndex={activeSection === item.id ? 0 : -1}
-                  id={`yp-tab-${item.id}`}
-                  aria-controls={`yp-panel-${item.id}`}
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      {/* ===== Youth Program Info Panel Section ===== */}
+      <section className="yp-info-section">
+        <div className="yp-info-container">
+          <nav
+            className="yp-info-nav"
+            role="tablist"
+            aria-label="Youth program age groups"
+            aria-orientation="vertical"
+          >
+            <ul className="yp-info-nav-list">
+              {programSections.map((item, index) => (
+                <li key={item.id}>
+                  <button
+                    className={`yp-info-nav-item${
+                      activeSection === item.id ? ' yp-info-nav-item--active' : ''
+                    }`}
+                    onClick={() => handleNavClick(item.id)}
+                    onKeyDown={(e) => handleKeyDown(e, item.id, index)}
+                    aria-selected={activeSection === item.id}
+                    role="tab"
+                    tabIndex={activeSection === item.id ? 0 : -1}
+                    id={`yp-tab-${item.id}`}
+                    aria-controls={`yp-panel-${item.id}`}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        <div
-          className={`yp-info-content${
-            isTransitioning ? ' yp-info-content--fading' : ''
-          }`}
-          ref={contentRef}
-          role="tabpanel"
-          id={`yp-panel-${activeData.id}`}
-          aria-labelledby={`yp-tab-${activeData.id}`}
-        >
-          <h3 className="yp-info-content-title">{activeData.title}</h3>
-          <div className="yp-info-divider" />
-          <p className="yp-info-content-text">{activeData.content}</p>
+          <div
+            className={`yp-info-content${
+              isTransitioning ? ' yp-info-content--fading' : ''
+            }`}
+            ref={contentRef}
+            role="tabpanel"
+            id={`yp-panel-${activeData.id}`}
+            aria-labelledby={`yp-tab-${activeData.id}`}
+          >
+            <h3 className="yp-info-content-title">{activeData.title}</h3>
+            <div className="yp-info-divider" />
+            <p className="yp-info-content-text">{activeData.content}</p>
+          </div>
         </div>
-      </div>
-    </section>
-    </>
+      </section>
+    </div>
   )
 }
 

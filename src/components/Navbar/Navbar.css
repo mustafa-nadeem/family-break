@@ -4,13 +4,17 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 0 24px;
+  width: 100%;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
   pointer-events: none;
 }
 
 .navbar-shell {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
   background: #ffffff;
   border-radius: 999px;
   height: 48px;

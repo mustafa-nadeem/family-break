@@ -3,7 +3,7 @@
    ============================ */
 
 .rooms-section {
-  background-color: #ffffff;
+  background-color: #E3EDF3;
   padding: 4rem 2.5rem;
   min-height: 100vh;
   display: flex;
@@ -12,8 +12,9 @@
 }
 
 .rooms-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
+  width: 100%;
 }
 
 /* Header */

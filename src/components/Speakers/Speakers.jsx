@@ -3,42 +3,42 @@ import './Speakers.css'
 const speakersData = [
   {
     id: 1,
-    name: 'Asim Khan',
-    title: 'Imam',
+    name: 'Shaykh Dr Haitham Al-Haddad',
+    title: 'Shaykh',
     description:
-      'An inspiring imam who connects faith to everyday life, guiding communities with warmth, clarity, and purpose.',
+      'A respected scholar known for clear, principled guidance and thoughtful reflections rooted in the Qur\'an and Sunnah.',
     image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=900&auto=format&fit=crop',
   },
   {
     id: 2,
-    name: 'Shaqur Rehman',
+    name: 'Shaykh Dr Sajid Umar',
     title: 'Sheikh',
     description:
-      'An engaging and motivational speaker with a passion for empowering the next generation.',
+      'An engaging teacher and international speaker whose reminders combine scholarship, relevance, and spiritual depth.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=900&auto=format&fit=crop',
   },
   {
     id: 3,
-    name: 'Umer Suleman',
-    title: 'Ustadh',
+    name: 'Shaykh Shaqur Rehman',
+    title: 'Shaykh',
     description:
-      'A thoughtful educator focused on reflection, character, and building a resilient Muslim identity.',
+      'An uplifting speaker with a strong focus on faith, family, and nurturing meaningful Islamic growth.',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=900&auto=format&fit=crop',
   },
   {
     id: 4,
-    name: 'Omar Farooq',
-    title: 'Sheikh',
+    name: 'Shaykh Farid Haibattan',
+    title: 'Shaykh',
     description:
-      'A dynamic speaker blending tradition and relevance to inspire meaningful spiritual growth.',
+      'A dynamic and articulate teacher known for practical reminders that resonate with families and young Muslims alike.',
     image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=900&auto=format&fit=crop',
   },
   {
     id: 5,
-    name: 'Bilal Nazir',
-    title: 'Imam',
+    name: 'Shaykh Mostafa Shaybaani',
+    title: 'Shaykh',
     description:
-      'A community leader dedicated to uplifting families through faith, service, and practical guidance.',
+      'A passionate speaker and educator whose talks emphasise spiritual sincerity, clarity, and everyday transformation.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=900&auto=format&fit=crop',
   },
 ]
@@ -56,7 +56,6 @@ function Speakers() {
                 <img src={speaker.image} alt={speaker.name} className="speaker-image" />
               </div>
               <div className="speaker-content">
-                <span className="speaker-title">{speaker.title}</span>
                 <h3 className="speaker-name">{speaker.name}</h3>
                 <p className="speaker-description">{speaker.description}</p>
               </div>
