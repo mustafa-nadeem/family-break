@@ -1,10 +1,10 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import fungameImg from '../../kidspic/fungame.webp'
-import learningImg from '../../kidspic/strcuturedlearning.webp'
-import competitionImg from '../../kidspic/competition.webp'
-import storytimeImg from '../../kidspic/storytime.webp'
+import fungameImg from '../../kidspic/fungame.png'
+import learningImg from '../../kidspic/structuredlearning.png'
+import competitionImg from '../../kidspic/competition.png'
+import storytimeImg from '../../kidspic/storytime.png'
 import './YouthProgram.css'
 
 gsap.registerPlugin(ScrollTrigger)

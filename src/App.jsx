@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Hero,
   Navbar,
@@ -11,13 +12,19 @@ import {
   Testimonials,
   FAQ,
   Sponsors,
-  Footer
+  Footer,
+  CloudIntro
 } from './components'
 import './App.css'
 
 function App() {
+  const [introComplete, setIntroComplete] = useState(false)
+
   return (
     <>
+      {/* Cinematic cloud reveal — unmounts after animation */}
+      <CloudIntro onComplete={() => setIntroComplete(true)} />
+
       <Navbar />
       <div className="hero-retreat-gradient">
         {/* Hero Section (includes Event Info) */}

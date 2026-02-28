@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import './Pillars.css'
 
 const pillarsData = [
@@ -13,7 +13,7 @@ const pillarsData = [
       'Tadabbur sessions rooted in the timeless reflections of Ayatul Kursi',
       'A warm, family-centred atmosphere shaped by learning, laughter, and love for Allah',
     ],
-    image: '/activitity.png',
+    image: '/topic.png',
   },
   {
     id: 'activities',
@@ -26,7 +26,7 @@ const pillarsData = [
       'Brothers-only and sisters-only sessions and curated activity selections on separate days',
       'Practical Qur\'an- and Sunnah-rooted reminders that stay with you long after the retreat',
     ],
-    image: '/activitity.png',
+    image: '/activities.png',
   },
   {
     id: 'food',
@@ -39,7 +39,7 @@ const pillarsData = [
       'Family seating and shared meal moments that strengthen connection',
       'A buzzing bazaar with stalls to explore between sessions',
     ],
-    image: '/activitity.png',
+    image: '/food.png',
   },
   {
     id: 'entertainment',
@@ -52,7 +52,7 @@ const pillarsData = [
       'Interactive experiences that create lasting shared memories',
       'A joyful retreat atmosphere that balances spiritual growth with genuine fun',
     ],
-    image: '/activitity.png',
+    image: '/entertainment.png',
   },
   {
     id: 'venue',
@@ -65,13 +65,45 @@ const pillarsData = [
       'Prayer spaces, picnic spots, and an indoor pool within the venue',
       'Registration from 3pm on Saturday and checkout at 12pm on Tuesday',
     ],
-    image: '/activitity.png',
+    image: '/venue.png',
   },
 ]
 
+const TRANSITION_MS = 380
+
 function Pillars() {
   const [activeTab, setActiveTab] = useState(0)
-  const active = pillarsData[activeTab]
+  const [displayTab, setDisplayTab] = useState(0)
+  const [animating, setAnimating] = useState(false)
+
+  const active = pillarsData[displayTab]
+
+  /* Preload all tab images on mount */
+  useEffect(() => {
+    pillarsData.forEach(({ image }) => {
+      const img = new Image()
+      img.src = image
+    })
+  }, [])
+
+  const handleTabClick = useCallback(
+    (index) => {
+      if (index === activeTab || animating) return
+      setActiveTab(index)
+      setAnimating(true)
+
+      // After exit animation completes, swap content & enter
+      setTimeout(() => {
+        setDisplayTab(index)
+        setAnimating(false)
+      }, TRANSITION_MS)
+    },
+    [activeTab, animating],
+  )
+
+  // Derive animation classes
+  const exiting = animating
+  const entering = !animating && displayTab === activeTab
 
   return (
     <section className="pillars-section">
@@ -81,7 +113,7 @@ function Pillars() {
           <button
             key={pillar.id}
             className={`pillars-tab ${index === activeTab ? 'active' : ''}`}
-            onClick={() => setActiveTab(index)}
+            onClick={() => handleTabClick(index)}
           >
             {pillar.label}
           </button>
@@ -90,13 +122,18 @@ function Pillars() {
 
       {/* Content */}
       <div className="pillars-content">
-        <div className="pillars-image">
-          <img
-            src={active.image}
-            alt={active.label}
-          />
+        <div
+          className={`pillars-image ${
+            exiting ? 'pillars-image--exit' : entering ? 'pillars-image--enter' : ''
+          }`}
+        >
+          <img src={active.image} alt={active.label} />
         </div>
-        <div className="pillars-text">
+        <div
+          className={`pillars-text ${
+            exiting ? 'pillars-text--exit' : entering ? 'pillars-text--enter' : ''
+          }`}
+        >
           <h2 className="pillars-title">{active.title}</h2>
           <p className="pillars-description">{active.description}</p>
           {active.points && (

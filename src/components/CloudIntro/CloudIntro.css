@@ -1,0 +1,71 @@
+/* ============================================
+   CloudIntro — Dense Cloud PNG Reveal
+   ============================================
+   ~74 copies of 2 real cloud photos, large sizes,
+   high opacity, stacked across 4 layers.
+   White base background ensures zero gaps.
+   ============================================ */
+
+.cloud-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  /* Solid white base — nothing shows through */
+  background: white;
+  will-change: transform;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+/* ---- Shared layer base ---- */
+.cloud-layer {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  will-change: transform;
+}
+
+/* ---- Individual cloud image ---- */
+.cloud-img {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ---- BACK LAYER — large base coverage ---- */
+.cloud-layer--back {
+  z-index: 0;
+}
+
+.cloud-img--back {
+  filter: blur(3px);
+}
+
+/* ---- MID LAYER ---- */
+.cloud-layer--mid {
+  z-index: 1;
+}
+
+.cloud-img--mid {
+  filter: blur(1px);
+}
+
+/* ---- FRONT LAYER — crisp, closest ---- */
+.cloud-layer--front {
+  z-index: 2;
+}
+
+.cloud-img--front {
+  filter: none;
+}
+
+/* ---- EDGE LAYER — curved top boundary ---- */
+.cloud-layer--edge {
+  z-index: 5;
+}
+
+.cloud-img--edge {
+  filter: none;
+}

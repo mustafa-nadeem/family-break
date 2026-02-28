@@ -139,6 +139,44 @@
 }
 
 /* ============================
+   Tab-switch transitions
+   ============================ */
+
+.pillars-image,
+.pillars-text {
+  transition: opacity 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform, filter;
+}
+
+/* ---- exit (old content fading out) ---- */
+.pillars-image--exit {
+  opacity: 0;
+  transform: scale(0.96) translateY(12px);
+  filter: blur(6px);
+}
+
+.pillars-text--exit {
+  opacity: 0;
+  transform: translateX(-18px);
+  filter: blur(4px);
+}
+
+/* ---- enter (new content fading in) ---- */
+.pillars-image--enter {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+}
+
+.pillars-text--enter {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+/* ============================
    Responsive Styles
    ============================ */
 
