@@ -1,4 +1,9 @@
 import './Speakers.css'
+import haithamImage from '../../assets/Haitham Al-Haddad 3.jpeg'
+import sajidImage from '../../assets/Sajid Umar 3.jpeg'
+import shaqurImage from '../../assets/Shaqur Rehman 2 (2).png'
+import faridImage from '../../assets/Farid Haibatan 1.jpg'
+import mostafaImage from '../../assets/shaykh-mostafa.png'
 
 const speakersData = [
   {
@@ -7,7 +12,7 @@ const speakersData = [
     title: 'Shaykh',
     description:
       'A respected scholar known for clear, principled guidance and thoughtful reflections rooted in the Qur\'an and Sunnah.',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=900&auto=format&fit=crop',
+    image: haithamImage,
   },
   {
     id: 2,
@@ -15,7 +20,7 @@ const speakersData = [
     title: 'Sheikh',
     description:
       'An engaging teacher and international speaker whose reminders combine scholarship, relevance, and spiritual depth.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=900&auto=format&fit=crop',
+    image: sajidImage,
   },
   {
     id: 3,
@@ -23,7 +28,7 @@ const speakersData = [
     title: 'Shaykh',
     description:
       'An uplifting speaker with a strong focus on faith, family, and nurturing meaningful Islamic growth.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=900&auto=format&fit=crop',
+    image: shaqurImage,
   },
   {
     id: 4,
@@ -31,7 +36,7 @@ const speakersData = [
     title: 'Shaykh',
     description:
       'A dynamic and articulate teacher known for practical reminders that resonate with families and young Muslims alike.',
-    image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=900&auto=format&fit=crop',
+    image: faridImage,
   },
   {
     id: 5,
@@ -39,7 +44,7 @@ const speakersData = [
     title: 'Shaykh',
     description:
       'A passionate speaker and educator whose talks emphasise spiritual sincerity, clarity, and everyday transformation.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=900&auto=format&fit=crop',
+    image: mostafaImage,
   },
 ]
 

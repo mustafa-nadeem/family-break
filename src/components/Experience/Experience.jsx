@@ -1,5 +1,6 @@
 import './Experience.css'
 import experienceImg from '../../assets/experience.webp'
+import sajidQuoteImg from '../../assets/quote-sajid.jpg'
 
 function Experience() {
   return (
@@ -16,6 +17,18 @@ function Experience() {
               has something for everyone.
             </p>
           </div>
+
+          <figure className="experience-quote">
+            <div className="experience-quote__portrait">
+              <img src={sajidQuoteImg} alt="Shaykh Sajid Umar" />
+            </div>
+            <figcaption className="experience-quote__content">
+              <blockquote className="experience-quote__text">
+                "The next best holiday after Hajj and Umrah"
+              </blockquote>
+              <p className="experience-quote__author">Shaykh Sajid Umar</p>
+            </figcaption>
+          </figure>
         </div>
 
         <div className="experience-image">

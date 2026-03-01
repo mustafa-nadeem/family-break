@@ -1,6 +1,6 @@
 .retreat-highlight {
   background: transparent;
-  padding: 96px 2.5rem;
+  padding: 32px 2.5rem 88px;
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -24,6 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  min-width: 0;
 }
 
 .retreat-highlight__eyebrow {
@@ -46,6 +47,8 @@
   font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.82);
+  max-width: 38rem;
+  overflow-wrap: anywhere;
 }
 
 .retreat-highlight__list {
@@ -55,6 +58,7 @@
   display: grid;
   gap: 0.75rem;
   color: rgba(255, 255, 255, 0.9);
+  max-width: 38rem;
 }
 
 .retreat-highlight__list li {
@@ -108,6 +112,7 @@
 
 .retreat-highlight__frame {
   width: 100%;
+  min-width: 0;
   border-radius: 24px;
   padding: 12px;
   background: rgba(255, 255, 255, 0.08);
@@ -204,25 +209,112 @@
 
 @media (max-width: 900px) {
   .retreat-highlight {
-    padding: 72px 1.5rem;
+    padding: 28px 1.5rem 68px;
   }
 
   .retreat-highlight__inner {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .retreat-highlight__title {
+    max-width: 12ch;
   }
 }
 
 @media (max-width: 640px) {
   .retreat-highlight {
-    padding: 60px 1rem;
+    padding: 22px 1rem 56px;
+  }
+
+  .retreat-highlight__eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+
+  .retreat-highlight__title {
+    max-width: none;
+    font-size: clamp(2rem, 11vw, 2.65rem);
+  }
+
+  .retreat-highlight__copy {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .retreat-highlight__list {
+    gap: 0.9rem;
+  }
+
+  .retreat-highlight__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .retreat-highlight__cta {
+    width: 100%;
+    max-width: 18rem;
+  }
+
+  .retreat-highlight__note {
+    font-size: 0.9rem;
   }
 
   .retreat-highlight__frame {
     padding: 10px;
   }
 
+  .retreat-highlight__media {
+    min-height: 240px;
+    aspect-ratio: 16 / 10;
+  }
+
+  .retreat-highlight__badge {
+    max-width: calc(100% - 32px);
+    font-size: 0.78rem;
+  }
+
   .retreat-highlight__play-icon {
     width: 56px;
     height: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .retreat-highlight {
+    padding: 48px 1rem;
+  }
+
+  .retreat-highlight__inner {
+    gap: 1.5rem;
+  }
+
+  .retreat-highlight__title {
+    font-size: clamp(1.9rem, 10.5vw, 2.35rem);
+  }
+
+  .retreat-highlight__copy,
+  .retreat-highlight__list li {
+    font-size: 0.94rem;
+  }
+
+  .retreat-highlight__list li {
+    gap: 0.6rem;
+  }
+
+  .retreat-highlight__media {
+    min-height: 220px;
+  }
+
+  .retreat-highlight__play-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .retreat-highlight__play-icon::after {
+    border-left-width: 14px;
+    border-top-width: 9px;
+    border-bottom-width: 9px;
   }
 }

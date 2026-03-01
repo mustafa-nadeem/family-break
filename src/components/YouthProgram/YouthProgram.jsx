@@ -93,48 +93,57 @@ function YouthProgram() {
   useLayoutEffect(() => {
     const section = sectionRef.current
     if (!section) return undefined
+    let mm
 
     const ctx = gsap.context(() => {
       const cards = cardsRef.current.filter(Boolean)
-      const totalCards = cards.length
-      if (!totalCards) return
+      if (!cards.length) return
 
-      cards.forEach((card, index) => {
-        gsap.set(card, {
-          rotation: 15,
-          y: window.innerHeight,
-          zIndex: index + 1,
+      mm = gsap.matchMedia()
+
+      mm.add('(min-width: 769px)', () => {
+        const totalCards = cards.length
+
+        cards.forEach((card, index) => {
+          gsap.set(card, {
+            rotation: 15,
+            y: window.innerHeight,
+            zIndex: index + 1,
+          })
         })
-      })
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: 'top top',
-          end: () => `+=${totalCards * Math.max(window.innerHeight * 0.45, 320)}`,
-          pin: true,
-          pinSpacing: true,
-          scrub: 0.8,
-          anticipatePin: 3,
-          fastScrollEnd: true,
-          invalidateOnRefresh: true,
-          refreshPriority: 1,
-        },
-      })
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: () => `+=${totalCards * Math.max(window.innerHeight * 0.45, 320)}`,
+            pin: true,
+            pinSpacing: true,
+            scrub: 0.8,
+            anticipatePin: 3,
+            fastScrollEnd: true,
+            invalidateOnRefresh: true,
+            refreshPriority: 1,
+          },
+        })
 
-      cards.forEach((card) => {
-        tl.to(card, {
-          rotation: 0,
-          y: 0,
-          duration: 1,
-          ease: 'none',
+        cards.forEach((card) => {
+          tl.to(card, {
+            rotation: 0,
+            y: 0,
+            duration: 1,
+            ease: 'none',
+          })
         })
       })
     }, section)
 
     ScrollTrigger.refresh()
 
-    return () => ctx.revert()
+    return () => {
+      mm?.revert()
+      ctx.revert()
+    }
   }, [])
 
   /* ── Info panel navigation handler ── */

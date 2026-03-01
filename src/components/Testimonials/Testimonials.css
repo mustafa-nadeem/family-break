@@ -153,12 +153,13 @@
 
 @media (max-width: 480px) {
   .testimonials-section {
-    padding: 3rem 0;
+    padding: 48px 1rem;
   }
 
   .testimonials-title {
     font-size: 1.75rem;
     margin-bottom: 2rem;
+    padding: 0;
   }
 
   .testimonial-card {

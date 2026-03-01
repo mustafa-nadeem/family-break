@@ -269,7 +269,7 @@
 
 @media (max-width: 480px) {
   .pillars-section {
-    padding: 2rem 1rem 2.5rem;
+    padding: 48px 1rem;
   }
 
   .pillars-tabs {
