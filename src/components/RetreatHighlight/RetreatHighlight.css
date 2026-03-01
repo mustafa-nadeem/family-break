@@ -202,27 +202,174 @@
   border-bottom: 10px solid transparent;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .retreat-highlight {
-    padding: 72px 1.5rem;
+    padding: 72px 2rem;
   }
 
   .retreat-highlight__inner {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .retreat-highlight__title {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+  }
+
+  .retreat-highlight__copy {
+    font-size: 1rem;
+  }
+
+  .retreat-highlight__media {
+    height: clamp(220px, 50vw, 380px);
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .retreat-highlight {
-    padding: 60px 1rem;
+    padding: 56px 1.25rem;
+  }
+
+  .retreat-highlight__inner {
+    gap: 2rem;
+  }
+
+  .retreat-highlight__content {
+    gap: 1rem;
+  }
+
+  .retreat-highlight__eyebrow {
+    font-size: 0.75rem;
+  }
+
+  .retreat-highlight__title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  .retreat-highlight__copy {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .retreat-highlight__list li {
+    font-size: 0.95rem;
+  }
+
+  .retreat-highlight__cta {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
   }
 
   .retreat-highlight__frame {
     padding: 10px;
+    border-radius: 18px;
+  }
+
+  .retreat-highlight__media {
+    height: clamp(200px, 55vw, 320px);
+    border-radius: 14px;
   }
 
   .retreat-highlight__play-icon {
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .retreat-highlight__badge {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
+    top: 12px;
+    left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .retreat-highlight {
+    padding: 40px 0.85rem;
+  }
+
+  .retreat-highlight__inner {
+    gap: 1.5rem;
+  }
+
+  .retreat-highlight__content {
+    gap: 0.85rem;
+  }
+
+  .retreat-highlight__eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+  }
+
+  .retreat-highlight__title {
+    font-size: 1.35rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .retreat-highlight__copy {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .retreat-highlight__list {
+    gap: 0.6rem;
+  }
+
+  .retreat-highlight__list li {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    gap: 0.5rem;
+  }
+
+  .retreat-highlight__list li::before {
+    width: 7px;
+    height: 7px;
+    margin-top: 0.38rem;
+  }
+
+  .retreat-highlight__actions {
+    gap: 0.75rem;
+  }
+
+  .retreat-highlight__cta {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .retreat-highlight__note {
+    font-size: 0.8rem;
+  }
+
+  .retreat-highlight__frame {
+    padding: 6px;
+    border-radius: 12px;
+  }
+
+  .retreat-highlight__media {
+    height: clamp(160px, 56vw, 240px);
+    border-radius: 9px;
+  }
+
+  .retreat-highlight__play-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .retreat-highlight__play-icon::after {
+    border-left-width: 11px;
+    border-top-width: 7px;
+    border-bottom-width: 7px;
+  }
+
+  .retreat-highlight__badge {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.6rem;
+    top: 8px;
+    left: 8px;
   }
 }

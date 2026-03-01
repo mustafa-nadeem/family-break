@@ -212,24 +212,152 @@
   margin: 0;
 }
 
-@media (max-width: 900px) {
-  .hero-event-info {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: flex-start;
+@media (max-width: 1024px) {
+  /* Tablet adjustments */
+  .hero-sticky {
+    height: 110vh;
   }
 
-  .hero-event-info .info-right,
-  .countdown {
+  .video-wrapper {
+    height: 110vh;
+  }
+
+  .hero-event-info {
+    flex-direction: column;
+    gap: 2rem;
     align-items: flex-start;
+    padding: 2rem 2.5rem;
+  }
+
+  .hero-event-info .info-right {
+    align-self: flex-end;
+  }
+
+  .countdown {
+    align-items: flex-end;
+    gap: 0.6rem;
   }
 
   .countdown-timer {
-    grid-auto-flow: row;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+  }
+
+  .countdown-segment {
+    min-width: 0;
+    flex: 0 1 auto;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .countdown-value {
+    font-size: 1.35rem;
+  }
+
+  .countdown-unit {
+    font-size: 0.7rem;
+    margin-top: 0.1rem;
+  }
+
+  .countdown-label {
+    font-size: 0.9rem;
   }
 
   .hero-title-stack {
     gap: 0.6rem;
+  }
+
+  .hero-event-info .info-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-event-info .info-location {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile adjustments */
+  .hero-sticky {
+    height: 120vh;
+  }
+
+  .video-wrapper {
+    height: 120vh;
+  }
+
+  .hero-event-info {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem 1rem;
+  }
+
+  .hero-event-info .info-left {
+    align-items: center;
+  }
+
+  .hero-event-info .info-right {
+    align-self: center;
+  }
+
+  .countdown {
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero-event-info .info-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-event-info .info-location {
+    font-size: 1.05rem;
+  }
+
+  .hero-event-info .info-tagline {
+    font-size: 0.9rem;
+  }
+
+  .hero-event-info .info-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .countdown-label {
+    font-size: 0.8rem;
+  }
+
+  .countdown-timer {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .countdown-segment {
+    min-width: 0;
+    flex: 1 1 0%;
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.55rem;
+  }
+
+  .countdown-value {
+    font-size: 1.3rem;
+  }
+
+  .countdown-unit {
+    font-size: 0.65rem;
+    margin-top: 0.1rem;
+  }
+
+  .countdown-live {
+    font-size: 1rem;
+  }
+
+  .hero-title-image {
+    width: min(70vw, 300px);
+  }
+
+  .hero-title-details {
+    width: min(90vw, 320px);
   }
 }

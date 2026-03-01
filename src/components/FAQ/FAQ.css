@@ -214,12 +214,38 @@
   .faq-container {
     flex-direction: column;
     gap: 2.5rem;
+    align-items: center;
   }
 
   .faq-heading {
     flex: none;
     position: static;
     text-align: center;
+  }
+
+  .faq-list {
+    width: 100%;
+  }
+
+  .faq-question {
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .faq-question-text {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .faq-answer {
+    text-align: center;
+  }
+
+  .faq-answer p {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .faq-title {
@@ -236,10 +262,6 @@
 
   .faq-subtitle {
     margin-top: 0.5rem;
-  }
-
-  .faq-question-text {
-    font-size: 0.95rem;
   }
 }
 

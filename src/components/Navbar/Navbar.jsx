@@ -1,7 +1,30 @@
+import { useState, useEffect, useRef } from 'react'
 import logo from '../../assets/logo.png'
 import './Navbar.css'
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const menuRef = useRef(null)
+  const btnRef = useRef(null)
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    if (!menuOpen) return
+    const handleClick = (e) => {
+      if (
+        menuRef.current && !menuRef.current.contains(e.target) &&
+        btnRef.current && !btnRef.current.contains(e.target)
+      ) {
+        setMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [menuOpen])
+
+  // Close menu on link click
+  const handleLinkClick = () => setMenuOpen(false)
+
   return (
     <header className="navbar">
       <div className="navbar-shell">
@@ -21,7 +44,40 @@ function Navbar() {
             Book Now
           </a>
         </div>
+        <div className="navbar-right-mobile">
+          <a className="navbar-book navbar-book-mobile" href="#book">
+            Book Now
+          </a>
+          <button
+            ref={btnRef}
+            className={`navbar-burger${menuOpen ? ' open' : ''}`}
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
+
+      {/* Mobile slide-down menu */}
+      <nav
+        ref={menuRef}
+        className={`navbar-mobile-menu${menuOpen ? ' visible' : ''}`}
+        aria-label="Mobile"
+      >
+        <a href="#overview" onClick={handleLinkClick}>Overview</a>
+        <a href="#rooms" onClick={handleLinkClick}>Rooms</a>
+        <a href="#day-visitor" onClick={handleLinkClick}>Day Visitor</a>
+        <a href="#speakers" onClick={handleLinkClick}>Speakers</a>
+        <a href="#youth-programme" onClick={handleLinkClick}>Youth Programme</a>
+        <a href="#faq" onClick={handleLinkClick}>FAQ</a>
+        <a className="navbar-mobile-book" href="#book" onClick={handleLinkClick}>
+          Book Now
+        </a>
+      </nav>
     </header>
   )
 }
