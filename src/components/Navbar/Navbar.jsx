@@ -74,9 +74,6 @@ function Navbar() {
         <a href="#speakers" onClick={handleLinkClick}>Speakers</a>
         <a href="#youth-programme" onClick={handleLinkClick}>Youth Programme</a>
         <a href="#faq" onClick={handleLinkClick}>FAQ</a>
-        <a className="navbar-mobile-book" href="#book" onClick={handleLinkClick}>
-          Book Now
-        </a>
       </nav>
     </header>
   )

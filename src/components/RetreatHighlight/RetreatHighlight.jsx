@@ -36,7 +36,7 @@ function RetreatHighlight() {
             >
               Watch highlights
             </button>
-            <span className="retreat-highlight__note">2-min recap · 2025</span>
+            <span className="retreat-highlight__note">2-min recap · 2024</span>
           </div>
         </div>
 

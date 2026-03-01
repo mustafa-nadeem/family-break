@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc((100vw - 10rem) / 3);
+  width: min(280px, calc((100% - 10rem) / 3));
   max-width: 280px;
 }
 
@@ -80,7 +80,7 @@
   }
 
   .sponsor-logo-card {
-    width: calc((100vw - 8rem) / 3);
+    width: min(220px, calc((100% - 8rem) / 3));
   }
 
   .sponsor-logo-img {
@@ -104,7 +104,7 @@
   }
 
   .sponsor-logo-card {
-    width: calc((100vw - 6rem) / 3);
+    width: min(180px, calc((100% - 6rem) / 3));
   }
 
   .sponsor-logo-img {
@@ -115,11 +115,15 @@
 
 @media (max-width: 480px) {
   .sponsors-section {
-    padding: 2rem 0;
+    padding: 48px 1rem;
   }
 
   .sponsors-marquee-track {
-    gap: 2.5rem;
+    gap: 1.75rem;
+  }
+
+  .sponsor-logo-card {
+    width: min(132px, calc((100% - 3rem) / 2));
   }
 
   .sponsor-logo-img {

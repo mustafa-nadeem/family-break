@@ -106,7 +106,7 @@ function Pillars() {
   const entering = !animating && displayTab === activeTab
 
   return (
-    <section className="pillars-section">
+    <section className="pillars-section" id="overview">
       {/* Tabs */}
       <div className="pillars-tabs">
         {pillarsData.map((pillar, index) => (

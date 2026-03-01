@@ -1,38 +1,29 @@
 import './Rooms.css'
 import wellingtonImg from '../../room_images/wekkington.webp'
 import wokefieldImg from '../../room_images/wokefield.webp'
-import mansionImg from '../../room_images/mansionhouse.webp'
+import toiletImg from '../../assets/toilet.jpg'
 
 const roomsData = [
   {
     id: 'wellington',
     name: 'Wellington Lodge Room',
     image: wellingtonImg,
-    description: 'Located within Wellington Lodge, a short walk from the main reception, this room offers comfort and convenience at our most affordable price.',
-    price: null,
-    soldOut: true,
   },
   {
     id: 'wokefield',
     name: 'Wokefield Place Room',
     image: wokefieldImg,
-    description: 'Nestled within the beautiful Wokefield Place, the Wokefield room provides a delightful blend of comfort and style.',
-    price: 'Prices range from £904 to £989',
-    soldOut: false,
   },
   {
     id: 'mansion',
-    name: 'Mansion House Room',
-    image: mansionImg,
-    description: 'Located within the historic Wokefield House, these premium rooms offer an elevated experience of opulence and grandeur.',
-    price: null,
-    soldOut: true,
+    name: 'Ensuite Facilities',
+    image: toiletImg,
   },
 ]
 
 function Rooms() {
   return (
-    <section className="rooms-section">
+    <section className="rooms-section" id="rooms">
       <div className="rooms-container">
         {/* Header */}
         <div className="rooms-header">
@@ -64,15 +55,6 @@ function Rooms() {
             <div key={room.id} className="room-card">
               <div className="room-image-wrapper">
                 <img src={room.image} alt={room.name} className="room-image" />
-              </div>
-              <div className="room-content">
-                <h4 className="room-name">{room.name}</h4>
-                <p className="room-description">{room.description}</p>
-                {room.soldOut ? (
-                  <span className="room-status sold-out">Sold Out</span>
-                ) : (
-                  <span className="room-status available">{room.price}</span>
-                )}
               </div>
             </div>
           ))}

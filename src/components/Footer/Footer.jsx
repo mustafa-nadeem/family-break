@@ -34,8 +34,8 @@ function Footer() {
                   <span className="footer-contact-icon" aria-hidden="true">
                     @
                   </span>
-                  <a href="mailto:registration@familyevents.org.uk">
-                    registration@familyevents.org.uk
+                  <a href="mailto:enquiry@familyevents.org.uk">
+                    enquiry@familyevents.org.uk
                   </a>
                 </li>
                 <li>

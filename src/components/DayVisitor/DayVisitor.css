@@ -209,12 +209,16 @@
 }
 
 @media (max-width: 480px) {
+  .day-visitor-section {
+    padding: 48px 1rem;
+  }
+
   .day-visitor-content {
-    grid-template-rows: 40vh auto;
+    grid-template-rows: auto auto;
   }
 
   .day-visitor-text {
-    padding: 32px 20px;
+    padding: 48px 0 0;
   }
 
   .day-visitor-title {

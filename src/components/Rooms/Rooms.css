@@ -84,21 +84,33 @@
 
 /* Individual Room Card */
 .room-card {
-  background: #ffffff;
+  position: relative;
+  border-radius: 1.1rem;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(17, 36, 125, 0.08));
+  border: 1px solid rgba(17, 36, 125, 0.08);
+  box-shadow: 0 18px 40px rgba(10, 26, 74, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .room-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 24px 48px rgba(10, 26, 74, 0.16);
 }
 
 .room-image-wrapper {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 3.25;
   overflow: hidden;
+  position: relative;
+}
+
+.room-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 16, 57, 0.02) 0%, rgba(5, 16, 57, 0.16) 100%);
+  pointer-events: none;
 }
 
 .room-image {
@@ -111,43 +123,6 @@
 
 .room-card:hover .room-image {
   transform: scale(1.05);
-}
-
-.room-content {
-  padding: 1.5rem;
-}
-
-.room-name {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin: 0 0 0.75rem;
-}
-
-.room-description {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #666;
-  margin: 0 0 1rem;
-}
-
-.room-status {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-}
-
-.room-status.sold-out {
-  background: #fef2f2;
-  color: #b91c1c;
-}
-
-.room-status.available {
-  background: #f0fdf4;
-  color: #166534;
 }
 
 /* Amenities Footer */
@@ -215,7 +190,7 @@
 
 @media (max-width: 480px) {
   .rooms-section {
-    padding: 3rem 1rem;
+    padding: 48px 1rem;
   }
 
   .rooms-title {
@@ -226,16 +201,12 @@
     font-size: 0.95rem;
   }
 
-  .room-content {
-    padding: 1.25rem;
+  .room-card {
+    border-radius: 0.95rem;
   }
 
-  .room-name {
-    font-size: 1rem;
-  }
-
-  .room-description {
-    font-size: 0.85rem;
+  .room-image-wrapper {
+    aspect-ratio: 4 / 3;
   }
 
   .rooms-amenities {

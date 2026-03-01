@@ -1,8 +1,9 @@
 import './DayVisitor.css'
+import audienceImage from '../../assets/audience listening the speech.png'
 
 function DayVisitor() {
   return (
-    <section className="day-visitor-section">
+    <section className="day-visitor-section" id="day-visitor">
       <div className="day-visitor-content">
         <div className="day-visitor-text">
           <h2 className="day-visitor-title">Day Visitor Tickets</h2>
@@ -50,10 +51,7 @@ function DayVisitor() {
         </div>
 
         <div className="day-visitor-image">
-          <img
-            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000&auto=format&fit=crop"
-            alt="Event activities and crowd"
-          />
+          <img src={audienceImage} alt="Audience listening to a speech" />
         </div>
       </div>
     </section>

@@ -221,30 +221,8 @@
     flex: none;
     position: static;
     text-align: center;
-  }
-
-  .faq-list {
     width: 100%;
-  }
-
-  .faq-question {
-    justify-content: center;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .faq-question-text {
-    font-size: 0.95rem;
-    text-align: center;
-  }
-
-  .faq-answer {
-    text-align: center;
-  }
-
-  .faq-answer p {
-    max-width: 100%;
-    text-align: center;
+    max-width: 38rem;
     margin: 0 auto;
   }
 
@@ -263,15 +241,34 @@
   .faq-subtitle {
     margin-top: 0.5rem;
   }
+
+  .faq-list {
+    width: 100%;
+    max-width: 44rem;
+    margin: 0 auto;
+  }
+
+  .faq-answer p {
+    max-width: none;
+  }
+
+  .faq-question-text {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
   .faq-section {
-    padding: 3rem 1rem;
+    padding: 48px 1rem;
   }
 
   .faq-title {
     font-size: 2.5rem;
+  }
+
+  .faq-heading,
+  .faq-list {
+    max-width: 100%;
   }
 
   .faq-question {
