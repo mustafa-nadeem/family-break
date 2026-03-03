@@ -150,7 +150,6 @@
   will-change: opacity, transform, filter;
 }
 
-/* ---- exit (old content fading out) ---- */
 .pillars-image--exit {
   opacity: 0;
   transform: scale(0.96) translateY(12px);
@@ -163,7 +162,6 @@
   filter: blur(4px);
 }
 
-/* ---- enter (new content fading in) ---- */
 .pillars-image--enter {
   opacity: 1;
   transform: scale(1) translateY(0);
@@ -204,7 +202,7 @@
   }
 
   .pillars-tab {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .pillars-content {
@@ -214,12 +212,14 @@
 
   .pillars-image {
     flex: 0 0 auto;
-    max-width: 100%;
-    width: 100%;
+    max-width: 60%;
+    width: 60%;
+    margin: 0 auto;
   }
 
   .pillars-image img {
     max-height: none;
+    width: 100%;
   }
 
   .pillars-text {
@@ -227,16 +227,21 @@
   }
 
   .pillars-title {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
 
   .pillars-description {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     max-width: 100%;
+    line-height: 1.7;
   }
 
   .pillars-points {
     max-width: 100%;
+  }
+
+  .pillars-points li {
+    font-size: 1.05rem;
   }
 }
 
@@ -246,39 +251,63 @@
   }
 
   .pillars-tabs {
-    gap: 0.75rem 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .pillars-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .pillars-tab {
-    font-size: 1.25rem;
+    font-size: 2rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .pillars-image {
+    max-width: 55%;
+    width: 55%;
   }
 
   .pillars-title {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
 
   .pillars-description {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.65;
   }
 
   .pillars-points li {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .pillars-section {
-    padding: 48px 1rem;
+    padding: 2rem 1rem 2.5rem;
   }
 
   .pillars-tabs {
-    gap: 0.5rem 0.75rem;
-    padding-bottom: 0.75rem;
+    gap: 1.25rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .pillars-tab {
-    font-size: 1.1rem;
+    font-size: 2rem;
   }
 
   .pillars-tab.active::after {
@@ -286,17 +315,23 @@
     height: 2px;
   }
 
+  .pillars-image {
+    max-width: 50%;
+    width: 50%;
+  }
+
   .pillars-image img {
     max-height: none;
   }
 
   .pillars-title {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     margin-bottom: 1rem;
   }
 
   .pillars-description {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .pillars-points {
@@ -305,7 +340,7 @@
   }
 
   .pillars-points li {
-    font-size: 0.84rem;
+    font-size: 0.95rem;
     padding-left: 1rem;
   }
 }

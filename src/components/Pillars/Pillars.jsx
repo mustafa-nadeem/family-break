@@ -78,7 +78,6 @@ function Pillars() {
 
   const active = pillarsData[displayTab]
 
-  /* Preload all tab images on mount */
   useEffect(() => {
     pillarsData.forEach(({ image }) => {
       const img = new Image()
@@ -92,7 +91,6 @@ function Pillars() {
       setActiveTab(index)
       setAnimating(true)
 
-      // After exit animation completes, swap content & enter
       setTimeout(() => {
         setDisplayTab(index)
         setAnimating(false)
@@ -101,13 +99,11 @@ function Pillars() {
     [activeTab, animating],
   )
 
-  // Derive animation classes
   const exiting = animating
   const entering = !animating && displayTab === activeTab
 
   return (
     <section className="pillars-section">
-      {/* Tabs */}
       <div className="pillars-tabs">
         {pillarsData.map((pillar, index) => (
           <button
@@ -120,7 +116,6 @@ function Pillars() {
         ))}
       </div>
 
-      {/* Content */}
       <div className="pillars-content">
         <div
           className={`pillars-image ${

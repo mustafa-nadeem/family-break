@@ -1,6 +1,6 @@
 import './Speakers.css'
 import haithamImage from '../../assets/Haitham Al-Haddad 3.jpeg'
-import sajidImage from '../../assets/Sajid Umar 3.jpeg'
+import asimImage from '../../assets/Asim Khan 1 (1).jpg'
 import shaqurImage from '../../assets/Shaqur Rehman 2 (2).png'
 import faridImage from '../../assets/Farid Haibatan 1.jpg'
 import mostafaImage from '../../assets/shaykh-mostafa.png'
@@ -16,11 +16,11 @@ const speakersData = [
   },
   {
     id: 2,
-    name: 'Shaykh Dr Sajid Umar',
-    title: 'Sheikh',
+    name: 'Imam Asim Khan',
+    title: 'Imam',
     description:
       'An engaging teacher and international speaker whose reminders combine scholarship, relevance, and spiritual depth.',
-    image: sajidImage,
+    image: asimImage,
   },
   {
     id: 3,
