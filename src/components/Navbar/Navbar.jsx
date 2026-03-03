@@ -54,6 +54,7 @@ function Navbar() {
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
+            type="button"
           >
             <span />
             <span />

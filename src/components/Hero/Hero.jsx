@@ -37,6 +37,49 @@ function Hero() {
   const videoWrapperRef = useRef(null)
   const countdownTarget = useRef(new Date(2026, 7, 15, 0, 0, 0))
   const [countdown, setCountdown] = useState(() => getCountdown(countdownTarget.current))
+  const [isHeroMediaReady, setIsHeroMediaReady] = useState(false)
+
+  useEffect(() => {
+    const preloadLinks = [
+      { href: heroImage, type: 'image/png' },
+      { href: heroText, type: 'image/svg+xml' },
+    ].map(({ href, type }) => {
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.as = 'image'
+      link.href = href
+      link.type = type
+      link.fetchPriority = 'high'
+      document.head.appendChild(link)
+      return link
+    })
+
+    return () => {
+      preloadLinks.forEach((link) => link.remove())
+    }
+  }, [])
+
+  useEffect(() => {
+    let mounted = true
+    const image = new Image()
+    image.src = heroImage
+    image.fetchPriority = 'high'
+
+    const markReady = () => {
+      if (mounted) setIsHeroMediaReady(true)
+    }
+
+    if (image.decode) {
+      image.decode().then(markReady).catch(markReady)
+    } else {
+      image.onload = markReady
+      image.onerror = markReady
+    }
+
+    return () => {
+      mounted = false
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -91,14 +134,15 @@ function Hero() {
 
   return (
     <section className="hero-scroll-container" ref={scrollContainerRef}>
-      <div className="hero-sticky">
+      <div className={`hero-sticky${isHeroMediaReady ? ' hero-sticky--ready' : ''}`}>
         <div className="video-wrapper" ref={videoWrapperRef}>
           <img
-            className="hero-media"
+            className={`hero-media${isHeroMediaReady ? ' hero-media--ready' : ''}`}
             src={heroImage}
             alt="Event hero"
             loading="eager"
-            decoding="async"
+            decoding="sync"
+            fetchPriority="high"
           />
           <div className="hero-video-overlay" aria-hidden="true" />
           <div className="hero-title-stack">
@@ -106,6 +150,9 @@ function Hero() {
               className="hero-title-image"
               src={heroText}
               alt="The Greatest. Reflections from Ayatul Kursi"
+              loading="eager"
+              decoding="sync"
+              fetchPriority="high"
             />
             <div className="hero-title-details">
               <p className="hero-title-date">

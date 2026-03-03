@@ -3,8 +3,8 @@
    ============================ */
 
 .pillars-section {
-  background-color: #E3EDF3;
-  color: #11247D;
+  background-color: #00247D;
+  color: #fff;
   padding: 6rem 2.5rem 5rem;
   min-height: 100vh;
   height: 100vh;
@@ -27,7 +27,7 @@
   border: none;
   font-size: 3rem;
   font-weight: 500;
-  color: rgba(17, 36, 125, 0.4);
+  color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   padding: 0;
   position: relative;
@@ -37,11 +37,11 @@
 }
 
 .pillars-tab:hover {
-  color: rgba(17, 36, 125, 0.75);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .pillars-tab.active {
-  color: #11247D;
+  color: #fff;
 }
 
 .pillars-tab.active::after {
@@ -66,20 +66,13 @@
 .pillars-image {
   flex: 0 0 40%;
   max-width: 40%;
-  overflow: hidden;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
 }
 
 .pillars-image img {
-  width: 90%;
+  width: 100%;
   height: auto;
-  max-height: 100%;
   display: block;
-  margin: 0 auto;
-  object-fit: contain;
-  object-position: center;
+  border-radius: 2px;
 }
 
 .pillars-text {
@@ -93,7 +86,7 @@
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 1.25rem;
-  color: #11247D;
+  color: #fff;
   letter-spacing: -0.01em;
   text-decoration: underline;
   text-decoration-color: #E0196F;
@@ -104,76 +97,9 @@
 .pillars-description {
   font-size: 1rem;
   line-height: 1.7;
-  color: rgba(17, 36, 125, 0.75);
+  color: rgba(255, 255, 255, 0.75);
   margin: 0;
   max-width: 520px;
-}
-
-.pillars-points {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0 0;
-  display: grid;
-  gap: 0.85rem;
-  max-width: 560px;
-}
-
-.pillars-points li {
-  position: relative;
-  padding-left: 1.15rem;
-  font-size: 0.98rem;
-  line-height: 1.65;
-  color: rgba(17, 36, 125, 0.82);
-}
-
-.pillars-points li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.72rem;
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 999px;
-  background: #E0196F;
-  transform: translateY(-50%);
-}
-
-/* ============================
-   Tab-switch transitions
-   ============================ */
-
-.pillars-image,
-.pillars-text {
-  transition: opacity 0.38s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.38s cubic-bezier(0.4, 0, 0.2, 1),
-    filter 0.38s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity, transform, filter;
-}
-
-/* ---- exit (old content fading out) ---- */
-.pillars-image--exit {
-  opacity: 0;
-  transform: scale(0.96) translateY(12px);
-  filter: blur(6px);
-}
-
-.pillars-text--exit {
-  opacity: 0;
-  transform: translateX(-18px);
-  filter: blur(4px);
-}
-
-/* ---- enter (new content fading in) ---- */
-.pillars-image--enter {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-  filter: blur(0);
-}
-
-.pillars-text--enter {
-  opacity: 1;
-  transform: translateX(0);
-  filter: blur(0);
 }
 
 /* ============================
@@ -204,7 +130,7 @@
   }
 
   .pillars-tab {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .pillars-content {
@@ -214,14 +140,13 @@
 
   .pillars-image {
     flex: 0 0 auto;
-    max-width: 60%;
-    width: 60%;
-    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
   }
 
   .pillars-image img {
-    max-height: none;
-    width: 100%;
+    max-height: 40vh;
+    object-fit: cover;
   }
 
   .pillars-text {
@@ -229,21 +154,12 @@
   }
 
   .pillars-title {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
   }
 
   .pillars-description {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     max-width: 100%;
-    line-height: 1.7;
-  }
-
-  .pillars-points {
-    max-width: 100%;
-  }
-
-  .pillars-points li {
-    font-size: 1.05rem;
   }
 }
 
@@ -253,45 +169,20 @@
   }
 
   .pillars-tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding-bottom: 0.75rem;
-    margin-left: -1.25rem;
-    margin-right: -1.25rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .pillars-tabs::-webkit-scrollbar {
-    display: none;
+    gap: 0.75rem 1rem;
   }
 
   .pillars-tab {
-    font-size: 2rem;
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-
-  .pillars-image {
-    max-width: 55%;
-    width: 55%;
+    font-size: 1.25rem;
   }
 
   .pillars-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .pillars-description {
-    font-size: 1rem;
-    line-height: 1.65;
-  }
-
-  .pillars-points li {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 }
 
@@ -301,15 +192,12 @@
   }
 
   .pillars-tabs {
-    gap: 1.25rem;
-    margin-left: -1rem;
-    margin-right: -1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    gap: 0.5rem 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .pillars-tab {
-    font-size: 2rem;
+    font-size: 1.1rem;
   }
 
   .pillars-tab.active::after {
@@ -317,32 +205,16 @@
     height: 2px;
   }
 
-  .pillars-image {
-    max-width: 50%;
-    width: 50%;
-  }
-
   .pillars-image img {
-    max-height: none;
+    max-height: 35vh;
   }
 
   .pillars-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     margin-bottom: 1rem;
   }
 
   .pillars-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .pillars-points {
-    margin-top: 1.15rem;
-    gap: 0.7rem;
-  }
-
-  .pillars-points li {
-    font-size: 0.95rem;
-    padding-left: 1rem;
+    font-size: 0.85rem;
   }
 }
