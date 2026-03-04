@@ -47,7 +47,7 @@ function FAQ() {
   }
 
   return (
-    <section className="faq-section">
+    <section className="faq-section" id="faq">
       <div className="faq-container">
         {/* Left — heading */}
         <div className="faq-heading">
@@ -61,7 +61,7 @@ function FAQ() {
           <p className="faq-subtitle">
             Can't find the answer here?
             <br />
-            <a href="mailto:info@familybreak.co.uk" className="faq-contact-link">
+            <a href="mailto:enquiry@familyevents.org.uk" className="faq-contact-link">
               Contact support
             </a>
           </p>
