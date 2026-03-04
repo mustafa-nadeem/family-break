@@ -60,11 +60,11 @@ const categories = [
       },
       {
         question: 'I cannot pay it all at once, can I pay some now and some later?',
-        answer: "We have always had a policy never to close doors to those who are unable to afford our programmes. We can arrange a payment plan for those who need it and get discounts sponsored insha'Allah. But these are all assessed and you would need to contact us by email to begin the assessment process, registration@familyretreat.co.uk. Please remember we too are a not-for-profit organisation and rely upon donations, but we assure you, we will try our utmost to help you, insha'Allah.",
+        answer: "We have always had a policy never to close doors to those who are unable to afford our programmes. We can arrange a payment plan for those who need it and get discounts sponsored insha'Allah. But these are all assessed and you would need to contact us by email to begin the assessment process, enquiry@familyevents.org.uk. Please remember we too are a not-for-profit organisation and rely upon donations, but we assure you, we will try our utmost to help you, insha'Allah.",
       },
       {
         question: 'I did not book my child on the Youth Programme when I booked my rooms, how do I add him or her onto the programme?',
-        answer: "If there are places available and your child meets the minimum requirements for joining the programme, then just email us at registration@familyretreat.co.uk, and we will send you a link to add your children to the system and make the additional payment, insha'Allah.",
+        answer: "If there are places available and your child meets the minimum requirements for joining the programme, then just email us at enquiry@familyevents.org.uk, and we will send you a link to add your children to the system and make the additional payment, insha'Allah.",
       },
       {
         question: 'I need to cancel my room as I am unable to come now, what shall I do?',
