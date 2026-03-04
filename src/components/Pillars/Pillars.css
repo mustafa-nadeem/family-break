@@ -5,9 +5,8 @@
 .pillars-section {
   background-color: #E3EDF3;
   color: #11247D;
-  padding: 6rem 2.5rem 5rem;
-  min-height: 100vh;
-  height: 100vh;
+  padding: 6rem 2.5rem 8rem;
+  min-height: 120vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

@@ -32,7 +32,7 @@ const roomsData = [
 
 function Rooms() {
   return (
-    <section className="rooms-section">
+    <section className="rooms-section" id="rooms">
       <div className="rooms-container">
         {/* Header */}
         <div className="rooms-header">

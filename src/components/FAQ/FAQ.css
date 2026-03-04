@@ -34,6 +34,51 @@
   pointer-events: none;
 }
 
+/* ---- Category Pills ---- */
+.faq-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-category-pill {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.faq-category-pill:hover {
+  border-color: rgba(233, 30, 140, 0.45);
+  color: #fff;
+  background: rgba(233, 30, 140, 0.1);
+}
+
+.faq-category-pill--active {
+  background: linear-gradient(135deg, #e91e8c 0%, #c4167a 100%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(233, 30, 140, 0.35);
+}
+
+.faq-category-pill--active:hover {
+  background: linear-gradient(135deg, #e91e8c 0%, #c4167a 100%);
+  border-color: transparent;
+  box-shadow: 0 4px 24px rgba(233, 30, 140, 0.45);
+}
+
 /* Two-column container */
 .faq-container {
   display: flex;
@@ -204,6 +249,15 @@
   .faq-title {
     font-size: 3.25rem;
   }
+
+  .faq-categories {
+    margin-bottom: 3rem;
+  }
+
+  .faq-category-pill {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.3rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -255,6 +309,27 @@
   .faq-question-text {
     font-size: 0.95rem;
   }
+
+  .faq-categories {
+    margin-bottom: 2.5rem;
+    gap: 0.5rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+  }
+
+  .faq-categories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .faq-category-pill {
+    font-size: 0.82rem;
+    padding: 0.55rem 1.15rem;
+    flex-shrink: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -286,5 +361,14 @@
 
   .faq-answer p {
     font-size: 0.88rem;
+  }
+
+  .faq-categories {
+    margin-bottom: 2rem;
+  }
+
+  .faq-category-pill {
+    font-size: 0.78rem;
+    padding: 0.5rem 1rem;
   }
 }

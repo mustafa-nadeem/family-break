@@ -182,7 +182,7 @@ function YouthProgram() {
   const activeData = programSections.find((s) => s.id === activeSection)
 
   return (
-    <div className="youth-program-shell">
+    <div className="youth-program-shell" id="youth-programme">
       {/* ===== GSAP Card Stack Section ===== */}
       <section className="youth-program-section" ref={sectionRef}>
         <div className="youth-program-layout">
@@ -289,8 +289,36 @@ function YouthProgram() {
             aria-labelledby={`yp-tab-${activeData.id}`}
           >
             <h3 className="yp-info-content-title">{activeData.title}</h3>
-            <div className="yp-info-divider" />
-            <p className="yp-info-content-text">{activeData.content}</p>
+            <div className="yp-info-content-body">
+              {activeData.content.split('\n').reduce((acc, line, i, arr) => {
+                const trimmed = line.trim()
+                if (!trimmed) {
+                  acc.push(<br key={i} />)
+                  return acc
+                }
+                if (trimmed.startsWith('•')) {
+                  // Collect consecutive bullet lines into one <ul>
+                  const prevIsBullet = i > 0 && arr[i - 1].trim().startsWith('•')
+                  if (!prevIsBullet) {
+                    // Start of a new bullet group — collect all consecutive bullets
+                    const bullets = []
+                    for (let j = i; j < arr.length && arr[j].trim().startsWith('•'); j++) {
+                      bullets.push(arr[j].trim().replace(/^•\s*/, ''))
+                    }
+                    acc.push(
+                      <ul key={i} className="yp-info-points">
+                        {bullets.map((b, bi) => (
+                          <li key={bi}>{b}</li>
+                        ))}
+                      </ul>
+                    )
+                  }
+                  return acc
+                }
+                acc.push(<p key={i} className="yp-info-content-text">{trimmed}</p>)
+                return acc
+              }, [])}
+            </div>
           </div>
         </div>
       </section>

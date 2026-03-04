@@ -3,7 +3,7 @@ import audienceImage from '../../assets/audience listening the speech.png'
 
 function DayVisitor() {
   return (
-    <section className="day-visitor-section">
+    <section className="day-visitor-section" id="day-visitor">
       <div className="day-visitor-content">
         <div className="day-visitor-text">
           <h2 className="day-visitor-title">Day Visitor Tickets</h2>

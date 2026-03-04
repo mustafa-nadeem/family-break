@@ -50,7 +50,7 @@ const speakersData = [
 
 function Speakers() {
   return (
-    <section className="speakers-section">
+    <section className="speakers-section" id="speakers">
       <div className="speakers-container">
         <h2 className="speakers-title">Speakers</h2>
         
