@@ -289,8 +289,32 @@ function YouthProgram() {
             aria-labelledby={`yp-tab-${activeData.id}`}
           >
             <h3 className="yp-info-content-title">{activeData.title}</h3>
-            <div className="yp-info-divider" />
-            <p className="yp-info-content-text">{activeData.content}</p>
+            <div className="yp-info-content-body">
+              {activeData.content.split('\n\n').map((section, idx) => {
+                const lines = section.split('\n')
+                const hasPoints = lines.some((line) => line.trim().startsWith('•') || line.trim().startsWith('•'))
+                
+                if (hasPoints) {
+                  const points = lines
+                    .filter((line) => line.trim().startsWith('•') || line.trim().startsWith('•'))
+                    .map((line) => line.trim().replace(/^[••]\s*/, ''))
+                  
+                  return (
+                    <ul key={idx} className="yp-info-points">
+                      {points.map((point, pidx) => (
+                        <li key={pidx}>{point}</li>
+                      ))}
+                    </ul>
+                  )
+                } else {
+                  return (
+                    <p key={idx} className="yp-info-content-text">
+                      {section}
+                    </p>
+                  )
+                }
+              })}
+            </div>
           </div>
         </div>
       </section>
