@@ -7,20 +7,16 @@ const categories = [
     label: 'When & Where',
     questions: [
       {
-        q: 'When is Family Break 2026 taking place?',
-        a: 'Family Break 2026 is scheduled for 24–27 April 2026 (3 nights, 4 days).',
+        question: 'When does Family Break 2026 take place?',
+        answer: 'Family Break 2026 runs from Saturday 25th July to Tuesday 28th July 2026 — 3 nights and 4 days of an unforgettable experience.',
       },
       {
-        q: 'Where is the event being held?',
-        a: 'The event is at deVere Wokefield Estate, a 4-star venue nestled in the Berkshire countryside, approximately 1 hour from London.',
+        question: 'Where is the event held?',
+        answer: 'The retreat takes place at the beautiful De Vere Wokefield Estate in Reading — a luxury 4-star countryside venue.',
       },
       {
-        q: 'What time does registration start?',
-        a: 'Registration begins at 3:00 PM on Friday, 24 April. Day visitors can arrive from 7:00–8:00 AM on Saturday or 8:00 AM onwards on other days.',
-      },
-      {
-        q: 'What time does it finish?',
-        a: 'The final award ceremony wraps up by 12:30 PM on Sunday, 27 April.',
+        question: 'What time does registration open?',
+        answer: 'Registration opens at 3pm on Saturday. We recommend arriving early to settle in and explore the venue.',
       },
     ],
   },
@@ -29,88 +25,88 @@ const categories = [
     label: 'Accommodation',
     questions: [
       {
-        q: 'What are the room options?',
-        a: 'We offer stylish rooms across two main lodges: Wellington Lodge and Wokefield Place, ranging from twin to family rooms with en-suite facilities.',
+        question: 'If I book the accommodation, how much more is it for the lectures and other activities?',
+        answer: 'When you book the accommodation, the price includes full board meals and all the lectures and activities over the weekend. If you wish to put your children (4yrs \u2013 16yrs old) in the Children or Youth Programme, there is a \u00A320 surcharge per child, which must be booked when booking your room(s).',
       },
       {
-        q: 'Are families with young children accommodated separately?',
-        a: 'Families with children under 4 can request family-friendly rooms to ensure comfort during the stay. Please specify this during booking.',
+        question: 'How many beds are there in the hotel rooms?',
+        answer: 'There is either a twin bed or double bed in each room. Additional people will need to bring sleeping bags or other sleeping materials to sleep on the floor of the hotel rooms. We recommend you bring your own travel cots.',
       },
       {
-        q: 'Is bedding and towels provided?',
-        a: 'Yes, all rooms come with fresh, quality bedding and towels. The rooms are meticulously cleaned throughout your stay.',
+        question: 'My family is much larger than 2 adults and 3 children and I cannot get different rooms for my young children, what shall I do?',
+        answer: "Please contact our Sales department and they will help you as much as they can to make it practical for your family, insha'Allah. Call us on 020 3743 8484.",
       },
       {
-        q: 'Can I bring my own pillow or special bedding?',
-        a: 'Yes, you\'re welcome to bring personal items for comfort. Contact us ahead of time if you have specific bedding needs.',
+        question: 'Will we get towels and other toiletries in our rooms?',
+        answer: 'The hotel rooms will be fully serviced and have towels and bed sheets which will be replaced daily if required.',
       },
       {
-        q: 'Are rooms air-conditioned or climate-controlled?',
-        a: 'Rooms are temperature-controlled with heating for comfort. The venue is air-conditioned in common areas.',
+        question: 'Do the rooms have kettles and irons?',
+        answer: 'All hotel rooms have kettles and irons.',
+      },
+      {
+        question: 'Do the rooms have fridges?',
+        answer: 'The hotel rooms do not have fridges.',
       },
     ],
   },
   {
-    id: 'bookings-payments',
-    label: 'Bookings / Payments / Cancellations',
+    id: 'bookings',
+    label: 'Bookings, Payments & Cancellations',
     questions: [
       {
-        q: 'How do I book?',
-        a: 'Visit our website and complete the online booking form. A deposit secures your place, with full payment due 6 weeks before the event.',
+        question: 'Can I reserve my room or my child on the youth programme without paying now?',
+        answer: 'No, all bookings are on a first-come-first-served basis and there are no cancellations or reservations.',
       },
       {
-        q: 'What payment methods do you accept?',
-        a: 'We accept card payments, bank transfers, and instalments for larger bookings. Contact us for a custom payment plan.',
+        question: 'I cannot pay it all at once, can I pay some now and some later?',
+        answer: "We have always had a policy never to close doors to those who are unable to afford our programmes. We can arrange a payment plan for those who need it and get discounts sponsored insha'Allah. But these are all assessed and you would need to contact us by email to begin the assessment process, registration@familyretreat.co.uk. Please remember we too are a not-for-profit organisation and rely upon donations, but we assure you, we will try our utmost to help you, insha'Allah.",
       },
       {
-        q: 'Is a deposit required?',
-        a: 'Yes, a non-refundable deposit of 25% is required to confirm your booking.',
+        question: 'I did not book my child on the Youth Programme when I booked my rooms, how do I add him or her onto the programme?',
+        answer: "If there are places available and your child meets the minimum requirements for joining the programme, then just email us at registration@familyretreat.co.uk, and we will send you a link to add your children to the system and make the additional payment, insha'Allah.",
       },
       {
-        q: 'What is your cancellation policy?',
-        a: 'Cancellations made 8+ weeks before the event receive a 75% refund (minus deposit). Cancellations within 4 weeks receive no refund.',
-      },
-      {
-        q: 'Can I transfer my booking to another person?',
-        a: 'Yes, you can transfer your booking to another family member at no extra charge, provided we\'re notified 4 weeks before the event.',
-      },
-      {
-        q: 'Are group discounts available?',
-        a: 'Yes! Groups of 10+ families receive a 10% discount. Contact us for group booking details.',
+        question: 'I need to cancel my room as I am unable to come now, what shall I do?',
+        answer: 'ALL bookings are non-refundable. Please note if cancelled, modified or in a case of no-shows, the total price of your booking will be charged. Alternatively, you may sell your room to a family or friend. After you have sold it, please inform us of the changed details via email and we will confirm the change for you. The last name changes permitted are 72 hours before the event begins.',
       },
     ],
   },
   {
     id: 'children-youth',
-    label: 'Children & Youth',
+    label: 'Children & Youth Programme',
     questions: [
       {
-        q: 'Is there a programme for toddlers?',
-        a: 'Yes! Our crèche caters for children under 4 with supervised play, sensory activities, and Islamic nasheeds.',
+        question: 'What age groups and programmes will be available at the weekend?',
+        answer: "Please see the Youth Programme section for more details on age groups. Closer to the event, we will provide even more details on daily itineraries, insha'Allah.",
       },
       {
-        q: 'What if my child has special dietary needs?',
-        a: 'Please notify us at booking. We accommodate allergies, intolerances, and dietary preferences (halal, vegan, gluten-free, etc.).',
+        question: 'If I have not registered for the programmes, can my child join on the day?',
+        answer: "No, pre-registration is a must, so don't delay.",
       },
       {
-        q: 'Can children with additional needs attend?',
-        a: 'Absolutely. We welcome all children and work with families to ensure appropriate support is in place. Contact us to discuss requirements.',
+        question: 'Are the programmes segregated?',
+        answer: 'Yes, the programmes are fully segregated above the age of 12 years old.',
       },
       {
-        q: 'Are siblings placed together in the youth programme?',
-        a: 'Yes, siblings are placed in the same group whenever possible to ensure comfort and continuity.',
+        question: 'My child is just under 4 years old and is really independent, can he/she please join the Youth Programme?',
+        answer: 'We apologise but the team organising the children\u2019s weekend of activities have explicitly said they will not be able to cater for children under 4 years old. We do not recommend very young children being away from their parents for such long periods as we believe it is not good for their emotional development.',
       },
       {
-        q: 'Do you offer transport between the venue and activities?',
-        a: 'All youth and children\'s activities are at the venue. Supervised transport is arranged for any off-site adventures.',
+        question: "I don't want my child doing a specific activity.",
+        answer: 'We respect individual choice, but this may mean that you would have to collect your child for that period.',
       },
       {
-        q: 'What happens if my child gets homesick?',
-        a: 'Our trained youth leaders are experienced in managing homesickness. Parents are contactable, and we\'ll support your child through the experience.',
+        question: 'What happens at lunchtime, do our children get lunch on the programme?',
+        answer: 'Parents are expected to collect their children and take them for lunch. Unless we have made a specific arrangement for some of the older children, parents must collect their children. Children who are not collected will not be allowed to continue on the programme the following day.',
       },
       {
-        q: 'What should I pack for my child?',
-        a: 'Pack comfortable clothing, trainers, and a light jacket. A packing list is sent upon confirmation.',
+        question: 'What if you need to contact us in an emergency?',
+        answer: 'We will be taking all parent mobile numbers. Children who cry for long periods and need their parents will be asked to join their parents outside of the programme. Parents who do not pick their children up will not be allowed to bring them the following day to the programme.',
+      },
+      {
+        question: 'Do I need to bring any special clothing?',
+        answer: 'Closer to the event, our team will be in contact with you to give you more exact details. But we expect you to bring a spare change of clothes, outdoor clothes and shoes as well as swimwear. We carry out all activities regardless of the weather conditions.',
       },
     ],
   },
@@ -119,92 +115,138 @@ const categories = [
     label: 'Day Visitors',
     questions: [
       {
-        q: 'Can I attend as a day visitor?',
-        a: 'Yes! Day Visitor Tickets give full access to all sessions and meals (except breakfast) without staying overnight.',
+        question: 'Can I get my own accommodation?',
+        answer: 'You may do so, especially if you live near the venue. But please note, you will find that staying in the event accommodation is not only more convenient but it gives you the full experience of the event.',
       },
       {
-        q: 'What are day visitor ticket prices?',
-        a: 'Day visitor pricing varies by day. Contact us for the latest rates.',
+        question: 'Will I get full board meals throughout my stay?',
+        answer: 'Day visitors will only be provided with lunch and dinner.',
       },
       {
-        q: 'Do day visitors get meals?',
-        a: 'Yes, all meals except breakfast (lunch, afternoon snacks, dinner) are included.',
-      },
-      {
-        q: 'Can day visitor children join the youth programme?',
-        a: 'Yes, day visitor children can enrol in the Youth Programme for an additional fee.',
-      },
-      {
-        q: 'When should I arrive as a day visitor?',
-        a: 'Day visitors register from 7:00–8:00 AM on Saturdays and 8:00 AM onwards on other days.',
+        question: 'Can my children attend the Youth Programme on the weekend?',
+        answer: 'Yes, they can attend as long as you pre-register them while there are spaces left. There is a \u00A320 charge per child above 4 years old till 16 yrs old. Under 4s are not permitted on the programme but there is a play area for Parents and Toddlers. The Youth Programme will take place from 9:00am \u2013 6:00pm on Saturday and Sunday.',
       },
     ],
   },
   {
-    id: 'transport-parking',
-    label: 'Transport / Parking',
+    id: 'transport',
+    label: 'Transport, Parking & Directions',
     questions: [
       {
-        q: 'Is there free parking at the venue?',
-        a: 'Yes, ample free onsite parking is available for all guests.',
+        question: 'What are the exact location details of the event?',
+        answer: 'De Vere Wokefield Estate, Goodboys Lane, Reading, RG7 3AE',
       },
       {
-        q: 'Is the venue easily accessible by car?',
-        a: 'Yes! Located near major roads (M4), with postcode RG7 4PE for sat-nav. Clear signage guides you from the main road.',
+        question: 'Is there parking at the venue?',
+        answer: 'Yes, there are free parking spaces available. Please follow directions by our stewards when arriving for the retreat.',
       },
       {
-        q: 'Is there public transport to the venue?',
-        a: 'The nearest train station is 20 minutes away. We can arrange group transportation upon request if you book a large family group.',
-      },
-      {
-        q: 'Do you offer a shuttle service from a central location?',
-        a: 'We can arrange coach hire for large groups returning to London. Contact us for options and pricing.',
-      },
-      {
-        q: 'Can I arrive early or leave late?',
-        a: 'Early arrival and late departure can be arranged for an additional fee. Request this at booking.',
+        question: 'Will you be providing coaches to and from the venue from various cities in the UK?',
+        answer: 'At the moment we do not have any plans to do so as most people are planning to make their own way to the venue.',
       },
     ],
   },
 ]
 
 function FAQ() {
-  const [activeCategory, setActiveCategory] = useState(categories[0].id)
+  const [activeCategory, setActiveCategory] = useState(0)
+  const [openIndex, setOpenIndex] = useState(0)
 
-  const currentCategory = categories.find((cat) => cat.id === activeCategory)
+  const handleCategoryClick = (index) => {
+    setActiveCategory(index)
+    setOpenIndex(0)
+  }
+
+  const toggleItem = (index) => {
+    setOpenIndex(openIndex === index ? -1 : index)
+  }
+
+  const activeQuestions = categories[activeCategory].questions
 
   return (
-    <section id="faq" className="faq-section">
-      {/* Title */}
-      <h2 className="faq-title">Frequently Asked Questions</h2>
-
-      {/* Category Pills */}
+    <section className="faq-section" id="faq">
+      {/* Category pills */}
       <div className="faq-categories">
-        {categories.map((cat) => (
+        {categories.map((cat, index) => (
           <button
             key={cat.id}
-            className={`faq-category-pill ${
-              activeCategory === cat.id ? 'faq-category-pill--active' : ''
-            }`}
-            onClick={() => setActiveCategory(cat.id)}
+            className={`faq-category-pill${index === activeCategory ? ' faq-category-pill--active' : ''}`}
+            onClick={() => handleCategoryClick(index)}
           >
             {cat.label}
           </button>
         ))}
       </div>
 
-      {/* QA List */}
-      <div className="faq-questions-wrapper">
-        {currentCategory && (
-          <div className="faq-questions-list">
-            {currentCategory.questions.map((item, idx) => (
-              <div key={idx} className="faq-qa-pair">
-                <h3 className="faq-question-text">{item.q}</h3>
-                <p className="faq-answer-text">{item.a}</p>
+      <div className="faq-container">
+        {/* Left — heading */}
+        <div className="faq-heading">
+          <h2 className="faq-title">
+            Questions
+            <br />
+            <span className="faq-title-and">and</span>
+            <br />
+            answers
+          </h2>
+          <p className="faq-subtitle">
+            Can't find the answer here?
+            <br />
+            <a href="mailto:enquiry@familyevents.org.uk" className="faq-contact-link">
+              Contact support
+            </a>
+          </p>
+        </div>
+
+        {/* Right — accordion */}
+        <div className="faq-list">
+          {activeQuestions.map((item, index) => {
+            const isOpen = openIndex === index
+            return (
+              <div
+                key={`${activeCategory}-${index}`}
+                className={`faq-item${isOpen ? ' faq-item--open' : ''}`}
+              >
+                <button
+                  className="faq-question"
+                  onClick={() => toggleItem(index)}
+                  aria-expanded={isOpen}
+                >
+                  <span className="faq-question-text">{item.question}</span>
+                  <span className="faq-icon">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d={
+                          isOpen
+                            ? 'M4 10h12'
+                            : 'M10 4v12M4 10h12'
+                        }
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  className="faq-answer-wrapper"
+                  style={{
+                    maxHeight: isOpen ? '300px' : '0',
+                  }}
+                >
+                  <div className="faq-answer">
+                    <p>{item.answer}</p>
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
-        )}
+            )
+          })}
+        </div>
       </div>
     </section>
   )
