@@ -25,8 +25,12 @@
 
 .rooms-title {
   font-size: 3rem;
-  font-weight: 300;
-  color: #1a1a1a;
+  font-weight: 700;
+  color: #11247D;
+  text-decoration: underline;
+  text-decoration-color: #E0196F;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
   margin: 0 0 1rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -34,7 +38,7 @@
 
 .rooms-title-accent {
   font-weight: 600;
-  color: #2c2c2c;
+  color: #11247D;
 }
 
 .rooms-tagline {

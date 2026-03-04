@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 @font-face {
   font-family: 'Circular Std';
   src: url('./assets/circular-std-medium-500.ttf') format('truetype');
