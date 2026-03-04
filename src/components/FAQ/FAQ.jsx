@@ -8,7 +8,7 @@ const categories = [
     questions: [
       {
         question: 'When does Family Break 2026 take place?',
-        answer: 'Family Break 2026 runs from Saturday 25th July to Tuesday 28th July 2026 — 3 nights and 4 days of an unforgettable experience.',
+        answer: 'Family Break 2026 runs from Saturday 15th August to Tuesday 18th August 2026 — 3 nights and 4 days of an unforgettable experience.',
       },
       {
         question: 'Where is the event held?',
