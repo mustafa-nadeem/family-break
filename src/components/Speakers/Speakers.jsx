@@ -3,7 +3,7 @@ import haithamImage from '../../assets/Haitham Al-Haddad 3.jpeg'
 import asimImage from '../../assets/Asim Khan 1 (1).jpg'
 import shaqurImage from '../../assets/Shaqur Rehman 2 (2).png'
 import faridImage from '../../assets/Farid Haibatan 1.jpg'
-import mostafaImage from '../../assets/shaykh-mostafa.png'
+import mostafaImage from '../../assets/sheikh-mostafa.png'
 
 const speakersData = [
   {
