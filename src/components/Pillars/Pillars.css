@@ -7,7 +7,7 @@
   color: #11247D;
   padding: 6rem 2.5rem 5rem;
   min-height: 100vh;
-  height: 100vh;
+  height: auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
