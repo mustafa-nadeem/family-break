@@ -112,7 +112,7 @@ function Hero() {
             />
             <div className="hero-title-details">
               <p className="hero-title-date">
-                15th - 18th August 2026
+                Saturday 15th – Tuesday 18th August 2026
               </p>
               <a href="https://checkout.family-break.com/" className="hero-book-btn">Book Now</a>
             </div>

@@ -350,11 +350,7 @@
 .yp-info-content-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #ffffff;
-  text-decoration: underline;
-  text-decoration-color: #E0196F;
-  text-underline-offset: 10px;
-  text-decoration-thickness: 3px;
+  color: #E0196F;
   margin: 0 0 1.5rem;
 }
 
