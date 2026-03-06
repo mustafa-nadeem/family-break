@@ -100,55 +100,59 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  width: min(80vw, 720px);
-  margin-top: 0.5rem;
+  gap: 0.6rem;
+  width: min(85vw, 800px);
+  margin-top: 1.25rem;
 }
 
 .hero-title-tagline {
-  font-size: clamp(0.9rem, 1.3vw, 1.15rem);
-  font-weight: 500;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-weight: 400;
   margin: 0;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.01em;
-  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 
 .hero-title-date {
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
   font-weight: 700;
-  margin: 0.25rem 0;
-  letter-spacing: -0.01em;
+  margin: 0.4rem 0 0.2rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .hero-title-location {
-  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
-  font-weight: 500;
-  margin: 0 0 0.75rem 0;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  font-weight: 400;
+  margin: 0;
   color: rgba(255, 255, 255, 0.9);
   font-style: italic;
+  letter-spacing: 0.01em;
 }
 
 .hero-book-btn {
   display: inline-block;
   background: #E0196F;
   color: #ffffff;
-  padding: 14px 48px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 16px 56px;
+  font-size: 0.9rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   border-radius: 50px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
   pointer-events: auto;
-  margin-top: 0.5rem;
+  margin-top: 1.25rem;
+  box-shadow: 0 8px 24px rgba(224, 25, 111, 0.35);
 }
 
 .hero-book-btn:hover {
   background: #c01560;
   color: #ffffff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(224, 25, 111, 0.45);
 }
 
 /* Event Info inside Hero */
@@ -327,19 +331,17 @@
   }
 
   .hero-title-details {
-    gap: 0.4rem;
-  }
-
-  .hero-title-tagline {
-    font-size: 0.95rem;
+    gap: 0.5rem;
+    margin-top: 1rem;
   }
 
   .hero-title-date {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
-  .hero-title-location {
-    font-size: 1rem;
+  .hero-book-btn {
+    padding: 14px 48px;
+    margin-top: 1rem;
   }
 
   .hero-event-info .info-title {
@@ -433,27 +435,27 @@
   }
 
   .hero-title-details {
-    width: min(90vw, 320px);
-    gap: 0.35rem;
+    width: min(92vw, 360px);
+    gap: 0.4rem;
+    margin-top: 0.75rem;
   }
 
   .hero-title-tagline {
-    font-size: 0.85rem;
-    line-height: 1.35;
+    font-size: 0.8rem;
   }
 
   .hero-title-date {
-    font-size: 1.25rem;
-    margin: 0.15rem 0;
+    font-size: 1.5rem;
+    margin: 0.2rem 0;
   }
 
   .hero-title-location {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
   }
 
   .hero-book-btn {
-    padding: 12px 36px;
-    font-size: 0.9rem;
+    padding: 14px 40px;
+    font-size: 0.85rem;
+    margin-top: 0.9rem;
   }
 }
