@@ -225,8 +225,8 @@
 }
 
 .pillars-activity-marquee-icon {
-  width: 28px;
-  height: 28px;
+  width: 84px;
+  height: 84px;
   object-fit: contain;
   filter: brightness(0) saturate(100%) invert(13%) sepia(60%) saturate(4800%) hue-rotate(230deg) brightness(85%) contrast(95%);
 }
