@@ -6,6 +6,7 @@ import {
   Pillars,
   Experience,
   DayVisitor,
+  ResidentialTickets,
   Speakers,
   YouthProgram,
   Testimonials,
@@ -43,6 +44,9 @@ function App() {
 
       {/* Day Visitor Section */}
       <DayVisitor />
+
+      {/* Residential Tickets Section */}
+      <ResidentialTickets />
 
       {/* Speakers Section */}
       <Speakers />

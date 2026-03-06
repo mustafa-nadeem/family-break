@@ -1,11 +1,60 @@
 /* ============================
-   Day Visitor Section
+   Day Visitor Section - Light Theme
    ============================ */
 
 .day-visitor-section {
   min-height: 100vh;
-  background: linear-gradient(160deg, #0a1a4a 0%, #0d2463 40%, #142d7a 100%);
-  color: #ffffff;
+  background: #E3EDF3;
+  color: #11247D;
+  overflow: hidden;
+}
+
+/* ============================
+   Scroll Reveal Animations
+   ============================ */
+
+.day-visitor-reveal {
+  opacity: 0;
+  transform: translateX(-40px);
+  filter: blur(4px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.day-visitor-reveal--visible {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+/* Staggered feature cards */
+.day-visitor-feature-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(3px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.day-visitor-feature-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Image reveal animation */
+.day-visitor-image-reveal {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.day-visitor-image-reveal--visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .day-visitor-content {
@@ -25,7 +74,7 @@
 .day-visitor-title {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #11247D;
   margin: 0 0 24px 0;
   line-height: 1.1;
 }
@@ -33,7 +82,7 @@
 .day-visitor-intro {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(17, 36, 125, 0.75);
   margin: 0 0 32px 0;
   max-width: 540px;
 }
@@ -56,14 +105,14 @@
 .feature-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #11247D;
   margin: 0 0 8px 0;
 }
 
 .feature-description {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.74);
+  color: rgba(17, 36, 125, 0.72);
   margin: 0;
   max-width: 540px;
 }
@@ -71,7 +120,7 @@
 .day-visitor-note {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.74);
+  color: rgba(17, 36, 125, 0.72);
   margin: 0 0 32px 0;
   max-width: 540px;
 }
@@ -87,12 +136,13 @@
   letter-spacing: 0.05em;
   border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   width: fit-content;
 }
 
 .day-visitor-cta:hover {
   background-color: #c01560;
+  transform: translateY(-2px);
 }
 
 .day-visitor-image {
@@ -104,7 +154,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 26, 74, 0.12) 0%, rgba(10, 26, 74, 0.38) 100%);
+  background: linear-gradient(180deg, rgba(227, 237, 243, 0.08) 0%, rgba(17, 36, 125, 0.15) 100%);
   pointer-events: none;
 }
 
