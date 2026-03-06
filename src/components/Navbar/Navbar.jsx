@@ -11,6 +11,7 @@ const overviewLinks = [
 ]
 
 const eventPassLinks = [
+  { href: '#residential-tickets', label: 'Residential Tickets' },
   { href: '#day-visitor', label: 'Day Visitor Tickets' },
 ]
 
