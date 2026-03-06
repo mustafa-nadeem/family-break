@@ -139,16 +139,30 @@
 }
 
 .pillars-activity-points {
+  list-style: none;
   margin: 0.1rem 0;
-  padding-left: 1.6rem;
+  padding-left: 0;
   max-width: 760px;
 }
 
 .pillars-activity-points li {
   font-size: 1.08rem;
   line-height: 1.45;
-  font-weight: 800;
-  color: #101010;
+  font-weight: 900;
+  color: rgba(17, 36, 125, 0.75);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.pillars-activity-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: #E0196F;
 }
 
 .pillars-inline-link {
@@ -167,7 +181,7 @@
   font-size: 1.2rem;
   line-height: 1.45;
   font-weight: 800;
-  color: #101010;
+  color: #E0196F;
   max-width: 760px;
 }
 

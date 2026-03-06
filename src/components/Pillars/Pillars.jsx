@@ -11,6 +11,7 @@ import mmaIcon from '../../assets/mma.svg'
 import fitnessIcon from '../../assets/fitness.svg'
 import rugbyIcon from '../../assets/rugby.svg'
 import gamingIcon from '../../assets/gaming.svg'
+import entertainmentImg from '../../assets/Group 5 (1).png'
 import './Pillars.css'
 
 const pillarsData = [
@@ -60,7 +61,7 @@ const pillarsData = [
   },
   {
     id: 'entertainment',
-    label: 'Entertainment',
+    label: 'Interactive Sessions',
     title: 'Evenings Full of Energy, Joy & Shared Memories',
     description:
       'Family Break is not only about learning. Your days and evenings are filled with energy, laughter, and memorable moments that bring families closer together in a lively, uplifting Islamic environment.',
@@ -69,7 +70,9 @@ const pillarsData = [
       'Interactive experiences that create lasting shared memories',
       'A joyful retreat atmosphere that balances spiritual growth with genuine fun',
     ],
-    image: '/entertainment.png',
+    highlightText:
+      'The Deenies Puppet Performance | The Family Gameshow | The Family Story Time',
+    image: entertainmentImg,
   },
   {
     id: 'food',
@@ -217,7 +220,7 @@ function Pillars() {
                   </p>
                 ))}
               </div>
-              {active.highlightText && <p className="pillars-highlight">{active.highlightText}</p>}
+              {active.highlightText && <p className={`pillars-highlight ${active.id === 'entertainment' ? 'pillars-highlight--entertainment' : ''}`}>{active.highlightText}</p>}
               {active.points && (
                 <ul className="pillars-points">
                   {active.points.map((point) => (

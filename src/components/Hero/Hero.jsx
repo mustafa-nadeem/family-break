@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import heroImage from '../../assets/hero-image.png'
-import heroText from '../../assets/hero-text.svg'
+import heroImage from '../../assets/background.jpg'
+import heroText from '../../assets/title.png'
 import './Hero.css'
 
 const getCountdown = (targetDate) => {
@@ -41,8 +41,8 @@ function Hero() {
 
   useEffect(() => {
     const preloadLinks = [
-      { href: heroImage, type: 'image/png' },
-      { href: heroText, type: 'image/svg+xml' },
+      { href: heroImage, type: 'image/jpeg' },
+      { href: heroText, type: 'image/png' },
     ].map(({ href, type }) => {
       const link = document.createElement('link')
       link.rel = 'preload'

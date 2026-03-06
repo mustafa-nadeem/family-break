@@ -3,7 +3,8 @@
    ============================ */
 
 .experience-section {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background: linear-gradient(160deg, #0a1a4a 0%, #0d2463 40%, #142d7a 100%);
   color: #ffffff;
   overflow: hidden;
@@ -81,8 +82,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   display: block;
+  transform: scale(2) translateY(30px);
 }
 
 .experience-quote__content {
@@ -119,6 +121,68 @@
   max-height: 100%;
   object-fit: contain;
   object-position: right center;
+}
+
+/* Stats / What families say */
+.experience-stats {
+  margin: 1.5rem 0 0;
+  max-width: 540px;
+}
+
+.experience-stats-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+}
+
+.experience-stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.experience-stats-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.experience-stats-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: #E0196F;
+  transform: translateY(-50%);
+}
+
+/* CTA in text area */
+.experience-cta {
+  margin: 1.5rem 0 0;
+  max-width: 540px;
+}
+
+.experience-cta-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #E0196F;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.experience-cta-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
 }
 
 /* ============================
