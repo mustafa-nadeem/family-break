@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import './ResidentialTickets.css'
 import residentialHeroImage from '../../assets/residential-hero.png'
-import residentialActivitiesImage from '../../assets/activity.png'
+import residentialActivitiesImage from '../../assets/DSC_3365.jpg'
 import residentialRoomingImage from '../../assets/room.png'
 
 function useRevealOnScroll(threshold = 0.15) {

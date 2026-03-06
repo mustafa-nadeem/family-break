@@ -6,7 +6,7 @@
 .residential-section {
   background: linear-gradient(160deg, #0a1a4a 0%, #0d2463 40%, #142d7a 100%);
   overflow: hidden;
-  scroll-margin-top: 120px;
+  scroll-margin-top: 90px;
 }
 
 /* ============================

@@ -1,5 +1,5 @@
 import './Experience.css'
-import experienceImg from '../../assets/experience.webp'
+import experienceImg from '../../assets/trusted-experience.png'
 import sajidQuoteImg from '../../assets/sajidumarv2.jpeg'
 
 function Experience() {

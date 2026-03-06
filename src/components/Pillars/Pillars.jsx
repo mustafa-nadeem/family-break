@@ -12,6 +12,9 @@ import fitnessIcon from '../../assets/fitness.svg'
 import rugbyIcon from '../../assets/rugby.svg'
 import gamingIcon from '../../assets/gaming.svg'
 import entertainmentImg from '../../assets/Group 5 (1).png'
+import activityTabImg from '../../assets/activity-v2.png'
+import foodImg from '../../assets/food.png'
+import venueImg from '../../assets/venue.png'
 import './Pillars.css'
 
 const pillarsData = [
@@ -57,7 +60,7 @@ const pillarsData = [
       { label: 'Tag Rugby', icon: rugbyIcon },
       { label: 'Mobile Gaming Van', icon: gamingIcon },
     ],
-    image: '/activities.png',
+    image: activityTabImg,
   },
   {
     id: 'entertainment',
@@ -85,7 +88,7 @@ const pillarsData = [
       'Family seating and shared meal moments that strengthen connection',
       'Providing 8 Full Board Meals throughout the event. 3 Dinners, 2 Lunches, 3 Breakfasts.',
     ],
-    image: '/food.png',
+    image: foodImg,
   },
   {
     id: 'venue',
@@ -103,7 +106,7 @@ const pillarsData = [
       'Wheelchair/pram access',
       'Conference Facilities',
     ],
-    image: '/venue.png',
+    image: venueImg,
   },
 ]
 
