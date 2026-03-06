@@ -7,16 +7,18 @@
   color: #11247D;
   padding: 6rem 2.5rem 5rem;
   min-height: 100vh;
-  height: 100vh;
+  height: auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 120px;
 }
 
 /* Tabs Row */
 .pillars-tabs {
   display: flex;
   gap: 2.5rem;
+  flex-wrap: wrap;
   position: relative;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
@@ -25,7 +27,7 @@
 .pillars-tab {
   background: none;
   border: none;
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 3vw, 3rem);
   font-weight: 500;
   color: rgba(17, 36, 125, 0.4);
   cursor: pointer;
@@ -59,13 +61,18 @@
 .pillars-content {
   display: flex;
   gap: 4rem;
-  align-items: center;
-  flex: 1;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.pillars-content--activities {
+  margin-bottom: 1.9rem;
 }
 
 .pillars-image {
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 0 0 36%;
+  max-width: 36%;
   overflow: hidden;
   border-radius: 2px;
   display: flex;
@@ -84,9 +91,11 @@
 
 .pillars-text {
   flex: 1;
+  min-width: 0;
+  max-width: min(860px, 100%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .pillars-title {
@@ -97,8 +106,11 @@
   letter-spacing: -0.01em;
   text-decoration: underline;
   text-decoration-color: #E0196F;
-  text-underline-offset: 10px;
+  text-underline-offset: 12px;
   text-decoration-thickness: 3px;
+  line-height: 1.26;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .pillars-description {
@@ -106,7 +118,132 @@
   line-height: 1.7;
   color: rgba(17, 36, 125, 0.75);
   margin: 0;
-  max-width: 520px;
+  max-width: min(760px, 100%);
+  overflow-wrap: anywhere;
+}
+
+.pillars-description--dark {
+  color: rgba(0, 0, 0, 0.9);
+  max-width: min(760px, 100%);
+}
+
+.pillars-description-group {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.pillars-activity-copy {
+  display: grid;
+  gap: 1rem;
+  max-width: min(760px, 100%);
+}
+
+.pillars-activity-points {
+  margin: 0.1rem 0;
+  padding-left: 1.6rem;
+  max-width: 760px;
+}
+
+.pillars-activity-points li {
+  font-size: 1.08rem;
+  line-height: 1.45;
+  font-weight: 800;
+  color: #101010;
+}
+
+.pillars-inline-link {
+  color: #11247D;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+}
+
+.pillars-inline-link:hover {
+  color: #E0196F;
+}
+
+.pillars-activity-closing {
+  margin: 0.1rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  font-weight: 800;
+  color: #101010;
+  max-width: 760px;
+}
+
+.pillars-activity-showcase {
+  margin-top: 0;
+  max-width: 100%;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(17, 36, 125, 0.14);
+}
+
+.pillars-activity-showcase-title {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #11247D;
+}
+
+.pillars-activity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 0.95rem;
+}
+
+.pillars-activity-card {
+  min-height: 140px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  background: linear-gradient(160deg, #1528a8 0%, #111d8b 100%);
+  box-shadow: 0 12px 24px rgba(8, 24, 95, 0.18);
+  padding: 0.9rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pillars-activity-card-icon {
+  width: 48px;
+  height: 48px;
+  color: #f3f7ff;
+  display: flex;
+  margin-bottom: 0.6rem;
+}
+
+.pillars-activity-card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.pillars-activity-card-icon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pillars-activity-card-label {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.28;
+  font-weight: 700;
+  max-width: 13ch;
+}
+
+.pillars-highlight {
+  margin: 1.5rem 0 0;
+  color: #E0196F;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  font-weight: 700;
+  max-width: min(760px, 100%);
+  overflow-wrap: anywhere;
 }
 
 .pillars-points {
@@ -179,12 +316,12 @@
    ============================ */
 
 @media (max-width: 1200px) {
-  .pillars-tab {
-    font-size: 2.25rem;
-  }
-
   .pillars-tabs {
     gap: 1.5rem;
+  }
+
+  .pillars-activity-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -210,6 +347,10 @@
     gap: 2rem;
   }
 
+  .pillars-content--activities {
+    margin-bottom: 1.4rem;
+  }
+
   .pillars-image {
     flex: 0 0 auto;
     max-width: 60%;
@@ -224,6 +365,7 @@
 
   .pillars-text {
     text-align: left;
+    max-width: 100%;
   }
 
   .pillars-title {
@@ -234,6 +376,28 @@
     font-size: 1.05rem;
     max-width: 100%;
     line-height: 1.7;
+  }
+
+  .pillars-activity-points li {
+    font-size: 1.1rem;
+  }
+
+  .pillars-activity-showcase {
+    max-width: 100%;
+    padding-top: 1rem;
+  }
+
+  .pillars-activity-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pillars-activity-card {
+    min-height: 124px;
+  }
+
+  .pillars-highlight {
+    font-size: 1.15rem;
+    max-width: 100%;
   }
 
   .pillars-points {
@@ -288,6 +452,24 @@
     line-height: 1.65;
   }
 
+  .pillars-activity-points li {
+    font-size: 1rem;
+  }
+
+  .pillars-activity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .pillars-activity-card-label {
+    font-size: 0.9rem;
+  }
+
+  .pillars-highlight {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
   .pillars-points li {
     font-size: 1rem;
   }
@@ -332,6 +514,51 @@
   .pillars-description {
     font-size: 0.95rem;
     line-height: 1.6;
+  }
+
+  .pillars-activity-points {
+    padding-left: 1.2rem;
+  }
+
+  .pillars-activity-points li {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .pillars-activity-showcase-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .pillars-activity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pillars-activity-card {
+    min-height: 112px;
+    border-radius: 14px;
+    padding: 0.75rem 0.55rem;
+  }
+
+  .pillars-activity-card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.45rem;
+  }
+
+  .pillars-activity-card-label {
+    font-size: 0.84rem;
+    line-height: 1.22;
+    max-width: 11ch;
+  }
+
+  .pillars-activity-closing {
+    font-size: 1rem;
+  }
+
+  .pillars-highlight {
+    font-size: 1rem;
+    margin-top: 1.25rem;
   }
 
   .pillars-points {

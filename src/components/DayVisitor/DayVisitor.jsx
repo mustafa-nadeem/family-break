@@ -44,7 +44,7 @@ function DayVisitor() {
 
           <p className="day-visitor-note">
             Please note that all day visitors are required to register and pick up their event packs upon
-            arrival on Friday or between 7-8 am on Saturday morning.
+            arrival on Saturday afternoon or between 7-8 am on Sunday morning.
           </p>
 
           <button className="day-visitor-cta">Book Now</button>

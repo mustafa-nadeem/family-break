@@ -23,7 +23,7 @@ const roomsData = [
 
 function Rooms() {
   return (
-    <section className="rooms-section" id="rooms">
+    <section className="rooms-section" id="residential-tickets">
       <div className="rooms-container">
         {/* Header */}
         <div className="rooms-header">

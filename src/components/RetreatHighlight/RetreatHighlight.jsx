@@ -10,7 +10,7 @@ function RetreatHighlight() {
   }
 
   return (
-    <section className="retreat-highlight">
+    <section className="retreat-highlight" id="previous-events">
       <div className="retreat-highlight__inner">
         <div className="retreat-highlight__content">
           <span className="retreat-highlight__eyebrow">Previous events</span>

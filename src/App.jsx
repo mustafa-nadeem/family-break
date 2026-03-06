@@ -5,7 +5,6 @@ import {
   RetreatHighlight,
   Pillars,
   Experience,
-  Rooms,
   DayVisitor,
   Speakers,
   YouthProgram,
@@ -38,8 +37,7 @@ function App() {
       {/* Experience Section */}
       <Experience />
 
-      {/* Rooms Section */}
-      <Rooms />
+      <div id="event-passes" />
 
       {/* Day Visitor Section */}
       <DayVisitor />
