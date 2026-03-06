@@ -1,6 +1,6 @@
 .youth-program-shell {
   position: relative;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .youth-program-shell::before {
@@ -258,105 +258,99 @@
 .yp-info-section {
   background: transparent;
   margin-top: -1px;
+  overflow: hidden;
   padding: 5rem 2.5rem;
 }
 
-.yp-info-container {
+/* ---- Horizontal Tabs ---- */
+.yp-info-tabs {
   display: flex;
   gap: 2.5rem;
-  max-width: none;
-  margin: 0;
-  align-items: flex-start;
-}
-
-/* ---- Side Navigation ---- */
-.yp-info-nav {
-  flex: 0 0 252px;
-}
-
-.yp-info-nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem;
-  background: #F7F7FA;
-  border-radius: 18px;
-  border: 1px solid rgba(17, 36, 125, 0.12);
-  box-shadow: 0 12px 28px rgba(7, 20, 71, 0.18);
-  overflow: hidden;
-}
-
-.yp-info-nav-item {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0.85rem 1.25rem;
-  border: none;
-  background: transparent;
-  font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: rgba(17, 36, 125, 0.78);
-  text-align: left;
-  cursor: pointer;
-  border-radius: 12px;
+  flex-wrap: wrap;
   position: relative;
-  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
-.yp-info-nav-item:hover {
-  background-color: rgba(17, 36, 125, 0.06);
-  transform: translateY(-1px);
+.yp-info-tab {
+  background: none;
+  border: none;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: inherit;
+  letter-spacing: -0.02em;
 }
 
-.yp-info-nav-item:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: -2px;
+.yp-info-tab:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.yp-info-nav-item--active {
-  background-color: #11247D;
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(17, 36, 125, 0.25);
+.yp-info-tab--active {
+  color: #ffffff;
 }
 
-.yp-info-nav-item--active::before {
+.yp-info-tab--active::after {
   content: '';
   position: absolute;
+  bottom: -1rem;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 60%;
-  background: #e91e8c;
-  border-radius: 0 4px 4px 0;
+  width: 100%;
+  height: 3px;
+  background: #E0196F;
+  z-index: 1;
 }
 
-.yp-info-nav-item--active:hover {
-  background-color: #11247D;
-  transform: none;
-}
-
-/* ---- Content Panel ---- */
-.yp-info-content {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.96);
-  border-radius: 22px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-  padding: 3rem 3.25rem;
-  min-height: 320px;
+/* ---- Two-Column Layout: Image + Text ---- */
+.yp-info-layout {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.yp-info-content--fading {
+.yp-info-layout--fading {
   opacity: 0;
   transform: translateY(6px);
 }
 
+/* Left: Image */
+.yp-info-image-side {
+  flex: 0 0 36%;
+  max-width: 36%;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  border: 3px solid rgba(224, 25, 111, 0.5);
+}
+
+.yp-info-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Crop 12-16 and parent images from right side to hide logo */
+#yp-panel-7-11 .yp-info-image,
+#yp-panel-parent .yp-info-image {
+  object-position: left center;
+  transform: scale(1.40);
+}
+
+/* Right: Text */
+.yp-info-text-side {
+  flex: 1;
+  min-width: 0;
+}
+
 .yp-info-content-title {
-  font-size: 1.85rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #11247D;
+  color: #ffffff;
   text-decoration: underline;
   text-decoration-color: #E0196F;
   text-underline-offset: 10px;
@@ -364,14 +358,10 @@
   margin: 0 0 1.5rem;
 }
 
-.yp-info-divider {
-  display: none;
-}
-
 .yp-info-content-body {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .yp-info-points {
@@ -386,7 +376,7 @@
 .yp-info-points li {
   position: relative;
   padding-left: 1.5rem;
-  color: rgba(17, 36, 125, 0.75);
+  color: rgba(255, 255, 255, 0.78);
   font-size: 1.05rem;
   line-height: 1.75;
 }
@@ -405,10 +395,10 @@
 
 .yp-info-content-text {
   font-size: 1.05rem;
-  color: rgba(17, 36, 125, 0.75);
+  color: rgba(255, 255, 255, 0.78);
   line-height: 1.75;
   max-width: 70ch;
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   white-space: pre-line;
 }
 
@@ -421,16 +411,16 @@
     padding: 3.5rem 2rem;
   }
 
-  .yp-info-nav {
-    flex: 0 0 220px;
+  .yp-info-tabs {
+    gap: 1.5rem;
   }
 
-  .yp-info-content {
-    padding: 2.25rem 2.5rem;
+  .yp-info-layout {
+    gap: 2.5rem;
   }
 
   .yp-info-content-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -439,45 +429,34 @@
     padding: 3rem 1.5rem;
   }
 
-  .yp-info-container {
+  .yp-info-tabs {
+    gap: 1rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .yp-info-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .yp-info-tab {
+    white-space: nowrap;
+    font-size: 1.1rem;
+  }
+
+  .yp-info-layout {
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  .yp-info-nav {
+  .yp-info-image-side {
     flex: none;
+    max-width: 100%;
     width: 100%;
-  }
-
-  .yp-info-nav-list {
-    display: flex;
-    overflow-x: auto;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 14px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .yp-info-nav-list::-webkit-scrollbar {
-    display: none;
-  }
-
-  .yp-info-nav-item {
-    white-space: nowrap;
-    padding: 0.65rem 1rem;
-    font-size: 0.85rem;
-    border-radius: 10px;
-  }
-
-  .yp-info-nav-item--active::before {
-    display: none;
-  }
-
-  .yp-info-content {
-    padding: 2rem 1.75rem;
-    min-height: auto;
-    border-radius: 18px;
   }
 
   .yp-info-content-title {
@@ -492,11 +471,6 @@
 @media (max-width: 480px) {
   .yp-info-section {
     padding: 48px 1rem;
-  }
-
-  .yp-info-content {
-    padding: 1.5rem 1.25rem;
-    border-radius: 14px;
   }
 
   .yp-info-content-title {

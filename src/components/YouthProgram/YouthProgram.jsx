@@ -1,6 +1,12 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import under4Img from '../../assets/youthprogamme/under4.png'
+import ages4to6Img from '../../assets/youthprogamme/4-6.jpg'
+import ages7to11Img from '../../assets/youthprogamme/7-11.png'
+import ages12to16Img from '../../assets/youthprogamme/12-16.png'
+import parentsImg from '../../assets/youthprogamme/parents.png'
+import awardsImg from '../../assets/youthprogamme/awards5.jpeg'
 import fungameImg from '../../kidspic/fungame.png'
 import learningImg from '../../kidspic/structuredlearning.png'
 import competitionImg from '../../kidspic/competition.png'
@@ -13,31 +19,35 @@ gsap.registerPlugin(ScrollTrigger)
 const programSections = [
   {
     id: 'under-4',
-    label: 'Under 4 year olds',
-    title: 'Under 4 Year Olds',
+    label: 'Ages 0–3',
+    title: '💛 Al Hamdh Crèche (Ages 0–3)',
     content:
-      'Our youngest attendees will be looked after in a safe, nurturing environment with gentle play activities, sensory exploration, and age-appropriate Islamic nasheeds. Trained caregivers ensure every child feels comfortable and happy while parents attend sessions.',
+      'The Al Hamdh Crèche provides a safe, fun, and imaginative environment designed especially for our youngest attendees. With supervised play, creative activities, and gentle Islamic inspiration, parents can enjoy peace of mind while their children are cared for by qualified staff.\n\nThis service is operated by an external company and is available for an additional hourly fee, payable directly during the event. Prices start from £7.50 per hour.',
+    image: under4Img,
   },
   {
     id: '4-6',
-    label: '4–6 year olds',
-    title: 'Little Hearts Programme (Ages 4–6)',
+    label: 'Ages 4–6',
+    title: '💛 Little Hearts Programme (Ages 4–6)',
     content:
-      'A joyful and nurturing introduction to Islamic learning, designed especially for our youngest attendees. Little Hearts blends storytelling, creativity, movement and play within a warm, safe, faith-centred environment.\n\nWhat children enjoy:\n• Islamic story adventures that bring morals to life\n• Creative crafts, roleplay and interactive learning\n• Light football sessions and active play\n• Safe soft play exploration\n• Nasheeds and puppet theatre experiences\n\nChildren are placed into colour-coded classes (Yellow, Green, Red) based on age and development.\n\nSessions:\nMorning: 9:00am–12:00pm\nAfternoon: 3:00pm–6:00pm\n\nLittle Hearts — where young imaginations grow and a love for Islam begins.',
+      'A joyful, nurturing and imaginative space created especially for our youngest attendees, the Little Hearts Programme brings learning to life through play, creativity and Islamic inspiration.\n\nDesigned for children aged 4–6, this engaging experience blends storytelling, movement, creativity and free play to help little ones develop confidence, character and a love for learning — all within a warm, safe and faith-centred environment.\n\n✨ What Little Hearts Will Experience\n\n📖 Islamic Story Adventures — Children journey through captivating Islamic stories that bring morals and values to life in ways they can understand, relate to and remember.\n🎨 Hands-on Crafts & Moral Play — Creative craft sessions, roleplay and interactive activities allow children to express themselves while reinforcing the lessons they learn through storytelling.\n⚽ Little Kickers Football — Fun, light football sessions that encourage teamwork, coordination and active play — helping children burn energy while building friendships.\n🧸 Soft Play Zone — A safe and welcoming soft play area offering space for exploration, movement and unstructured play time — essential for young learners.\n🎭 Nasheeds & Puppet Theatre — A magical blend of nasheeds, puppetry and theatrical storytelling that captures attention, sparks imagination and embeds key Islamic messages.\n🌟 Inspirational Fun Learning — Every moment is intentionally designed to delight, inspire and nurture young hearts, ensuring children associate Islamic learning with joy and excitement.\n\n🕘 Programme Structure\nTo ensure children feel comfortable and supported, participants are placed into three colour-coded classes — Yellow, Green and Red — based on age and development stage.\n\nDaily sessions run:\nMorning: 9:00am – 12:00pm\nAfternoon: 3:00pm – 6:00pm\n\nThis balanced structure allows children to learn, play, rest and return refreshed for more memorable experiences.\n\nLittle Hearts — where young imaginations grow, friendships blossom and love for Islam begins.',
+    image: ages4to6Img,
   },
   {
     id: '7-11',
-    label: '7–11 year olds',
-    title: 'Young Explorers Programme (Ages 7–11)',
+    label: 'Ages 7–11',
+    title: '🚀 Young Explorers Programme (Ages 7–11)',
     content:
-      'A vibrant programme where meaningful Islamic learning meets energetic fun. Designed to build confidence, curiosity and strong friendships in a structured, supportive setting.\n\nProgramme highlights:\n• Age-appropriate Islamic principle lessons\n• Four activity sessions and two educational lessons daily\n• Football, inflatables, gaming tournaments, rounders, arts and more\n• Small group classes supported by dedicated mentors\n\nYoung Explorers encourages teamwork, independence and spiritual growth — helping children thrive socially and personally.\n\nYoung Explorers — where learning is exciting and young Muslims grow with confidence.',
+      'The Young Explorers Programme is a vibrant and spiritually enriching experience crafted for children aged 7–11, where meaningful learning meets energetic fun and discovery.\n\nBlending engaging Islamic education with a wide range of exciting activities, this programme nurtures confidence, curiosity and connection — helping children grow socially, spiritually and personally in an environment designed just for them.\n\n✨ What Young Explorers Will Experience\n\n📘 Islamic Principle Lessons — Age-appropriate lessons that make essential Islamic teachings accessible, relevant and engaging — encouraging children to understand, reflect and apply values in their everyday lives.\n⚡ A Balanced Day of Learning & Activity — Each day is thoughtfully structured with 4 activity sessions and 2 educational lessons, creating the perfect rhythm of movement, learning and connection.\n🎯 Action-Packed Activities Include: Football for teamwork and healthy competition, inflatable outdoor games bringing laughter and high-energy fun, gaming tournaments offering friendly digital challenges, rounders to build coordination and group participation, art and craft sessions encouraging creativity and expression… and many more surprises throughout the experience.\n👥 Small Groups, Big Impact — Children are placed into 6 dedicated classes, each supported by two experienced Murabieen (mentors) who provide guidance, care and positive role modelling throughout the programme.\n\n🤝 Social & Spiritual Growth\nBeyond activities and lessons, Young Explorers is intentionally designed to foster meaningful friendships, develop teamwork and collaboration, build confidence and independence, and strengthen spiritual identity in a joyful setting.\n\nFor returning attendees, the programme becomes even more special — offering opportunities to reconnect with friends and continue building memories year after year.\n\nYoung Explorers — where learning is exciting, friendships flourish and young Muslims grow with confidence.',
+    image: ages12to16Img,
   },
   {
     id: '12-16',
-    label: '12–16 year olds',
-    title: 'Teen Track Programme (Ages 12–16)',
+    label: 'Ages 12–16',
+    title: '🔥 Teen Track Programme (Ages 12–16)',
     content:
-      'A transformative experience supporting teens through identity, faith and real-life challenges in a safe, empowering environment.\n\nWhat teens engage in:\n• Identity and resilience workshops\n• Open discussions on real-life issues through an Islamic lens\n• Sports tournaments and obstacle challenges\n• Mentorship from experienced youth leaders\n\nTeen Track builds confidence, strengthens faith and equips young people with direction and purpose.\n\nTeen Track — where young Muslims find their voice and step forward with clarity.',
+      'The Teen Track Programme is a powerful, transformative experience designed specifically for young people aged 12–16, supporting them through one of life\'s most defining stages with guidance, connection and purpose.\n\nGrounded in real-life relevance, Islamic resilience and open youth-led dialogue, Teen Track creates a safe and empowering space where teenagers can explore identity, strengthen faith and build the confidence to navigate today\'s world with clarity.\n\n✨ What Teens Will Experience\n\n🧭 Identity & Resilience Workshops — Thought-provoking sessions that help teens understand who they are, where they belong and how Islamic values can guide them through the challenges of adolescence.\n💬 Islamic Lens on Real-Life Issues — Honest, facilitated group discussions exploring social pressures, relationships, digital life and everyday dilemmas — all examined through a balanced Islamic perspective that encourages reflection and growth.\n🏆 Sports Tournaments & Obstacle Courses — High-energy activities designed to develop leadership, perseverance and teamwork. From competitive tournaments to obstacle challenges, teens will push themselves, support one another and grow in confidence.\n\n🌟 An Experience That Leaves a Mark\nTeen Track is led by dedicated youth workers with over a decade of experience, bringing deep understanding, relatability and mentorship that resonates with young people.\n\nCarefully curated and thoughtfully delivered, this programme stands as one of the most relevant, engaging and inspiring youth experiences, helping teens leave not only with memories — but with direction, resilience and lasting friendships.\n\nTeen Track — where young Muslims find their voice, strengthen their identity and step forward with purpose.',
+    image: ages7to11Img,
   },
   {
     id: 'parent',
@@ -45,6 +55,7 @@ const programSections = [
     title: 'Parent / Guardian',
     content:
       'While the children are engaged in their programmes, parents and guardians can attend dedicated lectures, workshops, and social gatherings. Rest assured that your children are in safe, capable hands throughout the retreat.',
+    image: parentsImg,
   },
   {
     id: 'awards',
@@ -52,6 +63,7 @@ const programSections = [
     title: 'Award Ceremony',
     content:
       'The retreat concludes with a memorable award ceremony celebrating the achievements of every child. Certificates, trophies, and special recognitions are handed out in front of proud families — a perfect ending to an unforgettable experience.',
+    image: awardsImg,
   },
 ]
 
@@ -77,7 +89,7 @@ const cardsData = [
   },
   {
     id: 4,
-    title: 'Evening Story-Time',
+    title: 'Interactive Sessions',
     image: storytimeImg,
     color: '#142d7a',
   },
@@ -116,14 +128,13 @@ function YouthProgram() {
           scrollTrigger: {
             trigger: section,
             start: 'top top',
-            end: () => `+=${Math.max(cardsToAnimate.length, 1) * Math.max(window.innerHeight * 0.45, 320)}`,
+            end: () => `+=${Math.max(cardsToAnimate.length, 1) * Math.max(window.innerHeight * 0.5, 360)}`,
             pin: true,
             pinSpacing: true,
-            scrub: 0.8,
-            anticipatePin: 3,
+            scrub: 1.2,
+            anticipatePin: 1,
             fastScrollEnd: true,
             invalidateOnRefresh: true,
-            refreshPriority: 1,
           },
         })
 
@@ -135,6 +146,9 @@ function YouthProgram() {
             ease: 'none',
           })
         })
+
+        // Buffer at end — section stays pinned briefly after last card lands
+        tl.to({}, { duration: 0.3 })
       })
     }, section)
 
@@ -250,55 +264,52 @@ function YouthProgram() {
 
       {/* ===== Youth Program Info Panel Section ===== */}
       <section className="yp-info-section">
-        <div className="yp-info-container">
-          <nav
-            className="yp-info-nav"
-            role="tablist"
-            aria-label="Youth program age groups"
-            aria-orientation="vertical"
-          >
-            <ul className="yp-info-nav-list">
-              {programSections.map((item, index) => (
-                <li key={item.id}>
-                  <button
-                    className={`yp-info-nav-item${
-                      activeSection === item.id ? ' yp-info-nav-item--active' : ''
-                    }`}
-                    onClick={() => handleNavClick(item.id)}
-                    onKeyDown={(e) => handleKeyDown(e, item.id, index)}
-                    aria-selected={activeSection === item.id}
-                    role="tab"
-                    tabIndex={activeSection === item.id ? 0 : -1}
-                    id={`yp-tab-${item.id}`}
-                    aria-controls={`yp-panel-${item.id}`}
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
+        {/* Horizontal tabs */}
+        <div className="yp-info-tabs">
+          {programSections.map((item, index) => (
+            <button
+              key={item.id}
+              className={`yp-info-tab${activeSection === item.id ? ' yp-info-tab--active' : ''}`}
+              onClick={() => handleNavClick(item.id)}
+              onKeyDown={(e) => handleKeyDown(e, item.id, index)}
+              aria-selected={activeSection === item.id}
+              role="tab"
+              tabIndex={activeSection === item.id ? 0 : -1}
+              id={`yp-tab-${item.id}`}
+              aria-controls={`yp-panel-${item.id}`}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
 
-          <div
-            className={`yp-info-content${
-              isTransitioning ? ' yp-info-content--fading' : ''
-            }`}
-            ref={contentRef}
-            role="tabpanel"
-            id={`yp-panel-${activeData.id}`}
-            aria-labelledby={`yp-tab-${activeData.id}`}
-          >
+        {/* Content: image left + text right */}
+        <div
+          className={`yp-info-layout${isTransitioning ? ' yp-info-layout--fading' : ''}`}
+          role="tabpanel"
+          id={`yp-panel-${activeData.id}`}
+          aria-labelledby={`yp-tab-${activeData.id}`}
+        >
+          <div className="yp-info-image-side">
+            <img
+              src={activeData.image}
+              alt={activeData.title}
+              className="yp-info-image"
+            />
+          </div>
+
+          <div className="yp-info-text-side" ref={contentRef}>
             <h3 className="yp-info-content-title">{activeData.title}</h3>
             <div className="yp-info-content-body">
               {activeData.content.split('\n\n').map((section, idx) => {
                 const lines = section.split('\n')
                 const hasPoints = lines.some((line) => line.trim().startsWith('•') || line.trim().startsWith('•'))
-                
+
                 if (hasPoints) {
                   const points = lines
                     .filter((line) => line.trim().startsWith('•') || line.trim().startsWith('•'))
                     .map((line) => line.trim().replace(/^[••]\s*/, ''))
-                  
+
                   return (
                     <ul key={idx} className="yp-info-points">
                       {points.map((point, pidx) => (

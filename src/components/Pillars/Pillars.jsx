@@ -61,7 +61,7 @@ const pillarsData = [
   },
   {
     id: 'entertainment',
-    label: 'Interactive Sessions',
+    label: 'Entertainment',
     title: 'Evenings Full of Energy, Joy & Shared Memories',
     description:
       'Family Break is not only about learning. Your days and evenings are filled with energy, laughter, and memorable moments that bring families closer together in a lively, uplifting Islamic environment.',
@@ -210,6 +210,22 @@ function Pillars() {
                 {active.activityParallel}
               </p>
               <p className="pillars-activity-closing">{active.activityClosing}</p>
+
+              {/* Activity icons marquee */}
+              <div className="pillars-activity-marquee-wrapper">
+                <div className="pillars-activity-marquee-track">
+                  {[...active.activityExperiences, ...active.activityExperiences].map((experience, index) => (
+                    <div key={`${experience.label}-${index}`} className="pillars-activity-marquee-item">
+                      <img
+                        src={experience.icon}
+                        alt={experience.label}
+                        className="pillars-activity-marquee-icon"
+                      />
+                      <span className="pillars-activity-marquee-label">{experience.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           ) : (
             <>
@@ -220,7 +236,6 @@ function Pillars() {
                   </p>
                 ))}
               </div>
-              {active.highlightText && <p className={`pillars-highlight ${active.id === 'entertainment' ? 'pillars-highlight--entertainment' : ''}`}>{active.highlightText}</p>}
               {active.points && (
                 <ul className="pillars-points">
                   {active.points.map((point) => (
@@ -228,31 +243,13 @@ function Pillars() {
                   ))}
                 </ul>
               )}
+              {active.highlightText && <p className={`pillars-highlight ${active.id === 'entertainment' ? 'pillars-highlight--entertainment' : ''}`}>{active.highlightText}</p>}
             </>
           )}
         </div>
       </div>
 
-      {isActivitiesTab && (
-        <section className="pillars-activity-showcase" aria-label="What you could experience">
-          <h3 className="pillars-activity-showcase-title">What You Could Experience</h3>
-          <div className="pillars-activity-grid">
-            {active.activityExperiences.map((experience) => (
-              <article key={experience.label} className="pillars-activity-card">
-                <div className="pillars-activity-card-icon">
-                  <img
-                    src={experience.icon}
-                    alt=""
-                    className="pillars-activity-card-icon-image"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="pillars-activity-card-label">{experience.label}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
+
     </section>
   )
 }

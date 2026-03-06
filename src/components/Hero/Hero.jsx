@@ -35,7 +35,7 @@ const getCountdown = (targetDate) => {
 function Hero() {
   const scrollContainerRef = useRef(null)
   const videoWrapperRef = useRef(null)
-  const countdownTarget = useRef(new Date(2026, 7, 15, 0, 0, 0))
+  const countdownTarget = useRef(new Date(2026, 3, 1, 0, 0, 0))
   const [countdown, setCountdown] = useState(() => getCountdown(countdownTarget.current))
   const [isHeroMediaReady, setIsHeroMediaReady] = useState(false)
 

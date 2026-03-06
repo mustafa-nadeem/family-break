@@ -12,7 +12,8 @@ import {
   FAQ,
   Sponsors,
   Footer,
-  CloudIntro
+  CloudIntro,
+  Promo
 } from './components'
 import './App.css'
 
@@ -28,6 +29,7 @@ function App() {
       <div className="hero-retreat-gradient">
         {/* Hero Section (includes Event Info) */}
         <Hero />
+        <Promo />
         <RetreatHighlight />
       </div>
 
