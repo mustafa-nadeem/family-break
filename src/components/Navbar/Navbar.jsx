@@ -127,13 +127,13 @@ function Navbar() {
         </nav>
 
         <div className="navbar-cta">
-          <a className="navbar-book" href="#book">
+          <a className="navbar-book" href="https://checkout.family-break.com/">
             Book Now
           </a>
         </div>
 
         <div className="navbar-right-mobile">
-          <a className="navbar-book navbar-book-mobile" href="#book">
+          <a className="navbar-book navbar-book-mobile" href="https://checkout.family-break.com/">
             Book Now
           </a>
           <button

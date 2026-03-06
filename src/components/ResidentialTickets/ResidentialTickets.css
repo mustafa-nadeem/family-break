@@ -564,114 +564,143 @@
   }
 
   .residential-block--hero {
-    padding-top: 40px;
+    padding-top: 48px;
   }
 
   .residential-block--amenities {
-    padding-bottom: 40px;
+    padding-bottom: 48px;
   }
 
   .residential-divider {
-    margin: 28px auto;
+    margin: 32px auto;
     max-width: 90%;
   }
 
   .residential-block-inner--hero,
   .residential-block-inner--activities,
   .residential-block-inner--rooming {
-    gap: 32px;
+    gap: 28px;
+  }
+
+  .residential-hero-image,
+  .residential-activities-image,
+  .residential-rooming-image {
+    border-radius: 10px;
   }
 
   .residential-image-placeholder,
   .residential-hero-img {
-    min-height: 240px;
+    min-height: 220px;
+    border-radius: 10px;
   }
 
   .residential-activities-image .residential-image-placeholder,
   .residential-activities-img,
   .residential-rooming-img,
   .residential-rooming-image .residential-image-placeholder {
-    min-height: 220px;
+    min-height: 200px;
+    border-radius: 10px;
   }
 
   .residential-title {
-    font-size: 1.75rem;
+    font-size: 1.85rem;
+    margin-bottom: 16px;
   }
 
   .residential-tagline {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
   }
 
   .residential-intro {
-    font-size: 0.9rem;
-    line-height: 1.65;
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
 
   .residential-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 24px;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
   }
 
   .residential-feature {
-    padding: 20px;
+    padding: 18px;
+    border-radius: 10px;
   }
 
   .residential-feature h4 {
-    font-size: 1.02rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 8px;
   }
 
   .residential-feature p {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
   }
 
   .residential-activities-lead {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    margin-bottom: 16px;
   }
 
   .residential-list {
-    margin-bottom: 20px;
-    gap: 10px;
+    margin-bottom: 16px;
+    gap: 8px;
   }
 
   .residential-list li {
-    font-size: 0.88rem;
-    padding-left: 16px;
+    font-size: 0.85rem;
+    padding-left: 14px;
+    line-height: 1.55;
+  }
+
+  .residential-list li::before {
+    width: 5px;
+    height: 5px;
+    top: 8px;
   }
 
   .residential-activities-note {
-    font-size: 0.88rem;
-    margin-bottom: 24px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    line-height: 1.55;
   }
 
   .residential-btn {
     width: 100%;
     text-align: center;
     padding: 14px 28px;
+    font-size: 0.85rem;
+    border-radius: 50px;
   }
 
   .residential-rooming-lead {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    margin-bottom: 16px;
   }
 
   .residential-rooming-note {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
   }
 
   .residential-example {
     padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
   }
 
   .residential-example-label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    margin-bottom: 6px;
   }
 
   .residential-example p {
-    font-size: 0.86rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
   }
 
   .residential-amenities-text {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 }

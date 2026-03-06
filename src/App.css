@@ -20,3 +20,35 @@
 .hero-retreat-gradient {
   background: linear-gradient(160deg, #0a1a4a 0%, #0d2463 40%, #142d7a 100%);
 }
+
+/* Shared anchor offset for fixed navbar */
+:root {
+  --anchor-offset: 112px;
+}
+
+html {
+  scroll-padding-top: var(--anchor-offset);
+}
+
+#previous-events,
+#overview,
+#event-passes,
+#day-visitor,
+#residential-tickets,
+#speakers,
+#youth-programme,
+#faq {
+  scroll-margin-top: var(--anchor-offset);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --anchor-offset: 102px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --anchor-offset: 92px;
+  }
+}

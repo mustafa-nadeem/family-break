@@ -3,40 +3,9 @@ import heroImage from '../../assets/background.jpg'
 import heroText from '../../assets/title.png'
 import './Hero.css'
 
-const getCountdown = (targetDate) => {
-  const now = new Date()
-  const diffMs = targetDate - now
-
-  if (diffMs <= 0) {
-    return {
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-      isLive: true,
-    }
-  }
-
-  const totalSeconds = Math.floor(diffMs / 1000)
-  const days = Math.floor(totalSeconds / 86400)
-  const hours = Math.floor((totalSeconds % 86400) / 3600)
-  const minutes = Math.floor((totalSeconds % 3600) / 60)
-  const seconds = totalSeconds % 60
-
-  return {
-    days,
-    hours,
-    minutes,
-    seconds,
-    isLive: false,
-  }
-}
-
 function Hero() {
   const scrollContainerRef = useRef(null)
   const videoWrapperRef = useRef(null)
-  const countdownTarget = useRef(new Date(2026, 3, 1, 0, 0, 0))
-  const [countdown, setCountdown] = useState(() => getCountdown(countdownTarget.current))
   const [isHeroMediaReady, setIsHeroMediaReady] = useState(false)
 
   useEffect(() => {
@@ -104,16 +73,13 @@ function Hero() {
       const maxRadius = 16
       const radius = progress * maxRadius
 
-      // Animate height: 100vh -> reduced to fit event info (160px for info + margins)
-      const heightReduction = progress * 160
-
       const effectiveOffset = baseOffset * progress
 
       wrapper.style.marginTop = `${effectiveOffset + margin}px`
       wrapper.style.marginLeft = `${margin}px`
       wrapper.style.width = `calc(100% - ${margin * 2}px)`
       wrapper.style.borderRadius = `${radius}px`
-      wrapper.style.height = `calc(100vh - ${effectiveOffset + margin + heightReduction}px)`
+      wrapper.style.height = `calc(100vh - ${effectiveOffset + margin}px)`
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -121,16 +87,6 @@ function Hero() {
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  useEffect(() => {
-    const tick = () => setCountdown(getCountdown(countdownTarget.current))
-    const intervalId = window.setInterval(tick, 1000)
-    tick()
-
-    return () => window.clearInterval(intervalId)
-  }, [])
-
-  const formatUnit = (value) => String(value).padStart(2, '0')
 
   return (
     <section className="hero-scroll-container" ref={scrollContainerRef}>
@@ -155,52 +111,10 @@ function Hero() {
               fetchPriority="high"
             />
             <div className="hero-title-details">
-              <p className="hero-title-tagline">
-                4-Day Luxury Residential Quran & Activity Weekend for the Entire Family
-              </p>
               <p className="hero-title-date">
                 15th - 18th August 2026
               </p>
-              <p className="hero-title-location">
-                De Vere Wokefield Estate, Reading
-              </p>
-              <a href="#book" className="hero-book-btn">Book Now</a>
-            </div>
-          </div>
-        </div>
-        <div className="hero-event-info">
-          <div className="info-left">
-            <h1 className="info-title">
-              <span className="title-the">Family</span>{' '}
-              <span className="title-night">Break</span>{' '}
-              <span className="title-journey">2026</span>
-            </h1>
-            <p className="info-location">De Vere Wokefield Estate, Reading</p>
-          </div>
-          <div className="info-right">
-            <div className="countdown">
-              {countdown.isLive ? (
-                <p className="countdown-live">We're live</p>
-              ) : (
-                <div className="countdown-timer" role="timer" aria-live="polite">
-                  <div className="countdown-segment">
-                    <span className="countdown-value">{countdown.days}</span>
-                    <span className="countdown-unit">Days</span>
-                  </div>
-                  <div className="countdown-segment">
-                    <span className="countdown-value">{formatUnit(countdown.hours)}</span>
-                    <span className="countdown-unit">Hours</span>
-                  </div>
-                  <div className="countdown-segment">
-                    <span className="countdown-value">{formatUnit(countdown.minutes)}</span>
-                    <span className="countdown-unit">Minutes</span>
-                  </div>
-                  <div className="countdown-segment">
-                    <span className="countdown-value">{formatUnit(countdown.seconds)}</span>
-                    <span className="countdown-unit">Seconds</span>
-                  </div>
-                </div>
-              )}
+              <a href="https://checkout.family-break.com/" className="hero-book-btn">Book Now</a>
             </div>
           </div>
         </div>

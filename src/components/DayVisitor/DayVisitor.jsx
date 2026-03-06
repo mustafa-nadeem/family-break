@@ -83,12 +83,13 @@ function DayVisitor() {
             arrival on Saturday afternoon or between 7-8 am on Sunday morning.
           </p>
 
-          <button
+          <a
+            href="https://checkout.family-break.com/"
             className={`day-visitor-cta day-visitor-feature-reveal ${sectionVisible ? 'day-visitor-feature-reveal--visible' : ''}`}
             style={{ transitionDelay: '500ms' }}
           >
             Book Now
-          </button>
+          </a>
         </div>
 
         <div className={`day-visitor-image day-visitor-image-reveal ${sectionVisible ? 'day-visitor-image-reveal--visible' : ''}`}>

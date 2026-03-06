@@ -126,6 +126,9 @@
 }
 
 .day-visitor-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: #E0196F;
   color: #fff;
   border: none;
@@ -138,6 +141,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   width: fit-content;
+  text-decoration: none;
 }
 
 .day-visitor-cta:hover {
