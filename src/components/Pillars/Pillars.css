@@ -185,6 +185,17 @@
   max-width: 760px;
 }
 
+.pillars-activity-marquee-heading {
+  margin: 0.35rem 0 0.35rem;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(17, 36, 125, 0.72);
+  text-align: center;
+}
+
 /* ---- Activity Icons Marquee ---- */
 .pillars-activity-marquee-wrapper {
   width: 100%;

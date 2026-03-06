@@ -209,9 +209,8 @@ function Pillars() {
                 </a>{' '}
                 {active.activityParallel}
               </p>
-              <p className="pillars-activity-closing">{active.activityClosing}</p>
-
               {/* Activity icons marquee */}
+              <h3 className="pillars-activity-marquee-heading">Previous Activities</h3>
               <div className="pillars-activity-marquee-wrapper">
                 <div className="pillars-activity-marquee-track">
                   {[...active.activityExperiences, ...active.activityExperiences].map((experience, index) => (
@@ -226,6 +225,7 @@ function Pillars() {
                   ))}
                 </div>
               </div>
+              <p className="pillars-activity-closing">{active.activityClosing}</p>
             </div>
           ) : (
             <>
