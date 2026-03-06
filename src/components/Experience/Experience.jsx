@@ -19,11 +19,20 @@ function Experience() {
 
           <div className="experience-stats">
             <h3 className="experience-stats-heading">What families say:</h3>
-            <ul className="experience-stats-list">
-              <li>87% say this experience is the next best thing after Hajj and Umrah</li>
-              <li>95% describe it as the best spiritual and practical learning event they have attended</li>
-              <li>99% recommend Family Break to their family and friends</li>
-            </ul>
+            <div className="experience-stats-cards">
+              <div className="experience-stat-card">
+                <span className="experience-stat-number">87%</span>
+                <p className="experience-stat-text">say this experience is the next best thing after Hajj and Umrah</p>
+              </div>
+              <div className="experience-stat-card">
+                <span className="experience-stat-number">95%</span>
+                <p className="experience-stat-text">describe it as the best spiritual and practical learning event they have attended</p>
+              </div>
+              <div className="experience-stat-card">
+                <span className="experience-stat-number">99%</span>
+                <p className="experience-stat-text">recommend Family Break to their family and friends</p>
+              </div>
+            </div>
           </div>
 
           <figure className="experience-quote">

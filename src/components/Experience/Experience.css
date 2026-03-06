@@ -125,43 +125,45 @@
 
 /* Stats / What families say */
 .experience-stats {
-  margin: 1.5rem 0 0;
-  max-width: 540px;
+  margin: 1.75rem 0 0;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  max-width: 600px;
 }
 
 .experience-stats-heading {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 0.75rem;
+  color: #11247D;
+  margin: 0 0 1.25rem;
+  text-align: center;
 }
 
-.experience-stats-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.experience-stats-cards {
   display: grid;
-  gap: 0.6rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
 
-.experience-stats-list li {
-  position: relative;
-  padding-left: 1.15rem;
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.82);
+.experience-stat-card {
+  text-align: center;
 }
 
-.experience-stats-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.72rem;
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 999px;
-  background: #E0196F;
-  transform: translateY(-50%);
+.experience-stat-number {
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #E0196F;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.experience-stat-text {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #11247D;
+  margin: 0;
 }
 
 /* CTA in text area */
@@ -210,6 +212,18 @@
   .experience-quote__text {
     font-size: 1.15rem;
   }
+
+  .experience-stats {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .experience-stat-number {
+    font-size: 2rem;
+  }
+
+  .experience-stat-text {
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -252,6 +266,18 @@
 
   .experience-quote {
     max-width: 100%;
+  }
+
+  .experience-stats {
+    max-width: 100%;
+  }
+
+  .experience-stats-cards {
+    gap: 1rem;
+  }
+
+  .experience-stat-number {
+    font-size: 1.85rem;
   }
 }
 
@@ -300,6 +326,29 @@
 
   .experience-quote__author {
     font-size: 0.88rem;
+  }
+
+  .experience-stats {
+    padding: 1.15rem 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .experience-stats-heading {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+
+  .experience-stats-cards {
+    gap: 0.75rem;
+  }
+
+  .experience-stat-number {
+    font-size: 1.65rem;
+  }
+
+  .experience-stat-text {
+    font-size: 0.72rem;
+    line-height: 1.4;
   }
 }
 
@@ -355,5 +404,38 @@
   .experience-quote__author {
     margin-top: 0.55rem;
     font-size: 0.82rem;
+  }
+
+  .experience-stats {
+    padding: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .experience-stats-heading {
+    font-size: 0.95rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .experience-stats-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .experience-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .experience-stat-number {
+    font-size: 1.75rem;
+    min-width: 60px;
+    margin-bottom: 0;
+  }
+
+  .experience-stat-text {
+    font-size: 0.8rem;
+    line-height: 1.35;
   }
 }
