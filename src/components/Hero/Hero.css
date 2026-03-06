@@ -99,21 +99,56 @@
 .hero-title-details {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  align-items: center;
+  gap: 0.5rem;
   width: min(80vw, 720px);
+  margin-top: 0.5rem;
+}
+
+.hero-title-tagline {
+  font-size: clamp(0.9rem, 1.3vw, 1.15rem);
+  font-weight: 500;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.01em;
+  line-height: 1.4;
 }
 
 .hero-title-date {
-  font-size: clamp(0.95rem, 1.2vw, 1.2rem);
-  font-weight: 600;
-  margin: 0;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  margin: 0.25rem 0;
+  letter-spacing: -0.01em;
 }
 
 .hero-title-location {
-  font-size: clamp(0.85rem, 1vw, 1.05rem);
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
   font-weight: 500;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 0.75rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+}
+
+.hero-book-btn {
+  display: inline-block;
+  background: #E0196F;
+  color: #ffffff;
+  padding: 14px 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  pointer-events: auto;
+  margin-top: 0.5rem;
+}
+
+.hero-book-btn:hover {
+  background: #c01560;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* Event Info inside Hero */
@@ -291,6 +326,22 @@
     gap: 0.6rem;
   }
 
+  .hero-title-details {
+    gap: 0.4rem;
+  }
+
+  .hero-title-tagline {
+    font-size: 0.95rem;
+  }
+
+  .hero-title-date {
+    font-size: 1.6rem;
+  }
+
+  .hero-title-location {
+    font-size: 1rem;
+  }
+
   .hero-event-info .info-title {
     font-size: 2.3rem;
   }
@@ -383,5 +434,26 @@
 
   .hero-title-details {
     width: min(90vw, 320px);
+    gap: 0.35rem;
+  }
+
+  .hero-title-tagline {
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+
+  .hero-title-date {
+    font-size: 1.25rem;
+    margin: 0.15rem 0;
+  }
+
+  .hero-title-location {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-book-btn {
+    padding: 12px 36px;
+    font-size: 0.9rem;
   }
 }

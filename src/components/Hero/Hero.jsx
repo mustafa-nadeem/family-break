@@ -155,9 +155,16 @@ function Hero() {
               fetchPriority="high"
             />
             <div className="hero-title-details">
-              <p className="hero-title-date">
-                Saturday, 15th August 2026 - Tuesday 18th August 2026
+              <p className="hero-title-tagline">
+                4-Day Luxury Residential Quran & Activity Weekend for the Entire Family
               </p>
+              <p className="hero-title-date">
+                15th - 18th August 2026
+              </p>
+              <p className="hero-title-location">
+                De Vere Wokefield Estate, Reading
+              </p>
+              <a href="#book" className="hero-book-btn">Book Now</a>
             </div>
           </div>
         </div>
